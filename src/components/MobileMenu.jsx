@@ -22,7 +22,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       </button>
 
       <a
-        href="#home"
+        href="#about"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
                     ${
@@ -32,10 +32,10 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                     }        
             `}
       >
-        Home
+        About
       </a>
       <a
-        href="#about"
+        href="#skills"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
@@ -43,7 +43,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             }        
     `}
       >
-        About
+        Skills
       </a>
       <a
         href="#projects"

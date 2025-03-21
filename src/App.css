@@ -6,7 +6,7 @@
   margin-left: 0; /* Add this to align to flex start */
   padding: 12px 48px;
   color: #fff;
-  background: linear-gradient(to right, #ADD8E6 0, #87CEEB 10%, #4682B4 20%);
+  background: linear-gradient(to right, #201377 0, #2ea7d7 10%, #3b4487 20%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
