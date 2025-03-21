@@ -1,42 +1,125 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* From Uiverse.io by Gaurav-WebDev */
+
+.button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .button:hover {
+    box-shadow: 0.5px 0.5px 150px #252525;
+  }
+  
+  .type1::after {
+    content: "Resume";
+    height: 50px;
+    width: 150px;
+    background-image: linear-gradient(to right, #062222, #33f1f1);
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1::before {
+    content: "HIRE ME";
+    height: 60px;
+    width: 150px;
+    background-image: linear-gradient(to right, #0e5575, #222a6e);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .type1:hover::after {
+    transform: translateY(0) scale(1.2);
+  }
+  
+  .type1:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+  }
+
+  /*  navigation menu */
+  .nav-link {
+    color: #ffffff; 
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #5966f7;
+  }
+
+
+/* Flip Card Styling */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
   text-align: center;
+  margin: 0;
+  color:#ffffff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid #0e5575;
+  border-radius: 1rem;
 }
 
-.card {
-  padding: 2em;
+.flip-card-front {
+  background: linear-gradient(120deg, #236483 60%, #395d5d 88%, #217b3a 40%, rgba(14, 85, 117, 0.603) 48%);
+  color: #33f1f1;
 }
 
-.read-the-docs {
-  color: #888;
+.flip-card-back {
+  background: linear-gradient(120deg, #33f1f1 30%, #0e5575 88%, #33f1f1 40%, #0e5575 78%);
+  color: white;
+  transform: rotateY(180deg);
 }
