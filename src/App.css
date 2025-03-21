@@ -1,5 +1,105 @@
 /* From Uiverse.io by Gaurav-WebDev */
 
+/* noa dave <a > tag */
+.btn-shine {
+  position: relative; /* Change from absolute to relative */
+  margin-left: 0; /* Add this to align to flex start */
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #ADD8E6 0, #87CEEB 10%, #4682B4 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+/* navbar github css*/
+/* From Uiverse.io by Creatlydev */ 
+.btn-github {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border-radius: 100px;
+  font-weight: 800;
+  place-content: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.825rem;
+  line-height: 1rem;
+  background-color: rgba(9, 87, 177, 0.4);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.btn-github:hover {
+  box-shadow:
+    inset 0 1px 0 0 rgba(18, 23, 57, 0.08),
+    inset 0 0 0 1px rgba(3, 91, 46, 0.08);
+  color: #00ff48;
+  transform: translate(0, -0.25rem);
+  background-color: rgba(6, 141, 141, 0.5);
+}
+
+/* nav */
 .button {
     height: 50px;
     width: 150px;
