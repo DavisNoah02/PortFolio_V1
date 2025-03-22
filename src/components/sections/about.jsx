@@ -1,29 +1,30 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Typewriter } from "react-simple-typewriter";
 
-export const Home = () => {
+export const About = () => {
   const Bio = {
     name: "Noah D. Munene",
     roles: [
       "Full Stack Developer",
-      "IT Consultant",
       "Technical Writer",
       "SEO Specialist",
+      "Web Developer",	
     ],
     description:
-      "I am a Web developer from Nairobi, KENYA, with 3 years of experience in building responsive and scalable web applications using modern technologies. .",
+      "I am a Web developer from Nairobi, KENYA, with 3 years of experience in building responsive and scalable web applications using modern technologies.",
   };
   return (
     <section
-      id="home"
-      className="min-h-screen flex flex-col items-center justify-center relative" // Changed to flex-col
+      id="about"
+     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative"
     >
       {/* Profile Image */}
-      <div className="w-64 h-64 mb-8">
+      <div className="md:w-1/2 flex justify-center md:order-2 mb-8 md:mb-0">
         <img
           src="/src/assets/images/Profile1.jpg"
           alt="Profile"
-          className="w-full h-full object-cover rounded-full shadow-lg border-4 border-green-500"
+          className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-lg border-4 border-green-500"
+          loading="lazy"
         />
       </div>
 

@@ -33,27 +33,61 @@ export const Education = () => {
           </h2>
 
           <div className="relative">
-            <div className="border-l-4 border-blue-500 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+            {/* Timeline line - positioned on left for mobile, center for desktop */}
+            <div className="border-l-4 border-blue-500 absolute h-full left-4 md:left-1/2 md:transform md:-translate-x-1/2"></div>
+            
             <div className="space-y-8">
               {educationData.map((edu, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col md:flex-row items-center ${
-                    index % 2 === 0 ? "md:flex-row-reverse" : ""
-                  }`}
+                  className="flex flex-col md:flex-row items-start md:items-center relative"
                 >
-                  <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2">
-                    <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
-                    <div className="flex items-center text-gray-400">
-                      <img src={edu.iconSrc} alt={`${edu.institution} icon`} className="w-6 h-6 mr-2" />
-                      <p>{edu.institution}</p>
-                    </div>
-                    <p className="text-cyan-400 mt-2">Grade: {edu.grade}</p>
-                    <p className="text-gray-300 mt-2">{edu.description}</p>
+                  {/* Timeline dot */}
+                  <div className="absolute w-6 h-6 bg-blue-500 rounded-full left-1 md:left-1/2 md:transform md:-translate-x-1/2 z-10 mt-2 md:mt-0"></div>
+                  
+                  {/* Content layout changes based on screen size */}
+                  <div className="md:w-1/2 md:pr-8 md:text-right md:self-center order-2 md:order-1 pl-12 md:pl-0">
+                    {index % 2 === 0 ? (
+                      <div className="hidden md:block text-lg font-semibold text-gray-300">
+                        {edu.year}
+                      </div>
+                    ) : (
+                      <div className="md:hidden"></div>
+                    )}
+                    {index % 2 === 1 && (
+                      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:text-right">
+                        <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
+                        <div className="flex items-center text-gray-400 md:justify-end">
+                          <img src={edu.iconSrc} alt={`${edu.institution} icon`} className="w-6 h-6 mr-2" />
+                          <p>{edu.institution}</p>
+                        </div>
+                        <p className="text-cyan-400 mt-2">Grade: {edu.grade}</p>
+                        <p className="text-gray-300 mt-2">{edu.description}</p>
+                        <p className="text-gray-400 mt-2 md:hidden">{edu.year}</p>
+                      </div>
+                    )}
                   </div>
-                  <div className="w-0 md:w-1/2 h-0 md:h-24"></div>
-                  <div className="text-grey-500 text-lg font-semibold w-full md:w-1/2 text-center md:text-left">
-                    {edu.year}
+                  
+                  <div className="md:w-1/2 md:pl-8 md:text-left md:self-center order-2 md:order-2 pl-12 md:pl-0">
+                    {index % 2 === 1 ? (
+                      <div className="hidden md:block text-lg font-semibold text-gray-300">
+                        {edu.year}
+                      </div>
+                    ) : (
+                      <div className="md:hidden"></div>
+                    )}
+                    {index % 2 === 0 && (
+                      <div className="bg-gray-800 p-6 rounded-lg shadow-lg w-full">
+                        <h3 className="text-xl font-bold mb-2">{edu.degree}</h3>
+                        <div className="flex items-center text-gray-400">
+                          <img src={edu.iconSrc} alt={`${edu.institution} icon`} className="w-6 h-6 mr-2" />
+                          <p>{edu.institution}</p>
+                        </div>
+                        <p className="text-cyan-400 mt-2">Grade: {edu.grade}</p>
+                        <p className="text-gray-300 mt-2">{edu.description}</p>
+                        <p className="text-gray-400 mt-2 md:hidden">{edu.year}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
