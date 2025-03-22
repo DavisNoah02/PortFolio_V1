@@ -1,6 +1,18 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { Typewriter } from "react-simple-typewriter";
 
 export const About = () => {
+  const Bio = {
+    name: "Noah D. Munene",
+    roles: [
+      "Full Stack Developer",
+      "IT Consultant",
+      "Technical Writer",
+      "SEO Specialist",
+    ],
+    description:
+      "I'm a full-stack developer passionate about building scalable web applications with exceptional performance and a focus on user experience. My goal is to craft solutions that are both efficient and delightful.",
+  };
   return (
     <section
       id="about"
@@ -9,13 +21,28 @@ export const About = () => {
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
-            Hi, I'm Noah Dave Munene
+            Hi, I'm <span className="text-white">{Bio.name}</span>
           </h1>
+         
+
+      {/* Typewriter Effect */}
+      <div className="mt-4 text-xl sm:text-2xl font-semibold">
+        <span>I am a </span>
+        <span className="text-blue-400">
+          <Typewriter
+            words={Bio.roles}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+          />
+        </span>
+      </div>
+      <br/>
 
           <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I’m a full-stack developer who loves crafting clean, scalable web
-            applications. My goal is to build solutions that offer both
-            exceptional performance and a delightful user experience.
+          {Bio.description}
           </p>
           <div className="flex justify-center space-x-8">
             <a

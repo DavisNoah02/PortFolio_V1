@@ -7,7 +7,7 @@ import { About} from "./components/sections/about";
 import { Skills} from "./components/sections/skills";
 import { Projects } from "./components/sections/projects";
 import "./index.css";
-// import { Contact } from "./components/sections/contact";
+import { Contact } from "./components/sections/contact";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,8 +24,8 @@ function App() {
           <About />
           <Skills/>
           <Projects />
-          {/* <Contact /> */}
-          
+          <Contact />
+
         </div>
       )}
     </div>

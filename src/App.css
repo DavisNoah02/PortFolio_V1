@@ -1,12 +1,11 @@
-/* From Uiverse.io by Gaurav-WebDev */
 
-/* noa dave <a > tag */
+/* noa dave <a> tag */
 .btn-shine {
-  position: relative; /* Change from absolute to relative */
-  margin-left: 0; /* Add this to align to flex start */
+  position: relative; 
+  margin-left: 0;
   padding: 12px 48px;
   color: #fff;
-  background: linear-gradient(to right, #201377 0, #2ea7d7 10%, #3b4487 20%);
+  background: linear-gradient(to right, #2506f0 0, #70cef3 10%, #193fe6 20%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -69,8 +68,8 @@
   }
 }
 
-/* navbar github css*/
-/* From Uiverse.io by Creatlydev */ 
+/* github btn css*/
+
 .btn-github {
   cursor: pointer;
   display: flex;
@@ -169,57 +168,15 @@
   }
 
 
-/* Flip Card Styling */
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  height: 254px;
-  perspective: 1000px;
-  font-family: sans-serif;
-}
-
-.title {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-  color:#ffffff;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 1px solid #0e5575;
-  border-radius: 1rem;
-}
-
-.flip-card-front {
-  background: linear-gradient(120deg, #236483 60%, #395d5d 88%, #217b3a 40%, rgba(14, 85, 117, 0.603) 48%);
-  color: #33f1f1;
-}
-
-.flip-card-back {
-  background: linear-gradient(120deg, #33f1f1 30%, #0e5575 88%, #33f1f1 40%, #0e5575 78%);
-  color: white;
-  transform: rotateY(180deg);
-}
+  .chart-container {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .skill-tag {
+    transition: all 0.2s ease;
+  }
+  
+  .skill-tag:hover {
+    transform: translateY(-2px);
+    background: rgba(99, 102, 241, 0.2);
+  }
