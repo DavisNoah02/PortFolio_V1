@@ -11,7 +11,7 @@ export const Projects = () => {
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             My Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
 
             {/* Project 1 */}
             <div
@@ -53,11 +53,24 @@ export const Projects = () => {
                   View Live
                 </a>
                 <a
-                  href="#"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
-                >
-                  View Code
-                </a>
+                href="#"
+                className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-base tracking-wide active:scale-95 transition-transform duration-300"
+              >
+                {/* Black overlay that slides away on hover */}
+                <div className="absolute inset-0 -left-[10%] w-[120%] h-full bg-black -skew-x-[30deg] transform transition-transform duration-400 ease-out group-hover:translate-x-full z-0"></div>
+                
+                {/* Button content stays on top */}
+                <div className="flex items-center space-x-2 relative z-10">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span>View Code</span>
+                </div>
+              </a>
               </div>
             </div>
 
@@ -103,11 +116,24 @@ export const Projects = () => {
                   View Live
                 </a>
                 <a
-                  href="#"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
-                >
-                  View Code
-                </a>
+                href="#"
+                className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-base tracking-wide active:scale-95 transition-transform duration-300"
+              >
+                {/* Black overlay that slides away on hover */}
+                <div className="absolute inset-0 -left-[10%] w-[120%] h-full bg-black -skew-x-[30deg] transform transition-transform duration-400 ease-out group-hover:translate-x-full z-0"></div>
+                
+                {/* Button content stays on top */}
+                <div className="flex items-center space-x-2 relative z-10">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span>View Code</span>
+                </div>
+              </a>
               </div>
             </div>
 
@@ -151,10 +177,23 @@ export const Projects = () => {
                   View Live
                 </a>
                 <a
-                  href="#"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
-                >
-                  View Code
+                href="#"
+                className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-base tracking-wide active:scale-95 transition-transform duration-300"
+              >
+                {/* Black overlay that slides away on hover */}
+                <div className="absolute inset-0 -left-[10%] w-[120%] h-full bg-black -skew-x-[30deg] transform transition-transform duration-400 ease-out group-hover:translate-x-full z-0"></div>
+                
+                {/* Button content stays on top */}
+                <div className="flex items-center space-x-2 relative z-10">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span>View Code</span>
+                </div>
                 </a>
               </div>
             </div>

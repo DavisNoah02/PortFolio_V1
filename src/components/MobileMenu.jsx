@@ -73,7 +73,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       </a>
       {/* Github Profile */}
       <a
-        href="https://github.com/your-github-profile"
+        href="https://github.com/DavisNoah02"
         target="_blank"
         rel="noopener noreferrer"
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300

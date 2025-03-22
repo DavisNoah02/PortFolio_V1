@@ -133,7 +133,7 @@
   }
   
   .type1::before {
-    content: "HIRE ME";
+    content: "Hire Me";
     height: 60px;
     width: 150px;
     background-image: linear-gradient(to right, #0e5575, #222a6e);

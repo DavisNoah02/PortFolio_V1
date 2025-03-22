@@ -41,6 +41,11 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             <a href="https://hashnode.com/@noadave" className="nav-link" target="_blank" rel="noreferrer">
               Blog
             </a>
+            <a
+              href="https://github.com/DavisNoah02" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
             <button class="btn-github">
               <svg
                 width="16"
@@ -56,6 +61,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               </svg>
               <span>Github Profile</span>
             </button>
+            </a>
           </div>
         </div>
       </div>
