@@ -22,14 +22,21 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="nav-link">
-              About
+          <a href="#home" className="nav-link">
+              Home
             </a>
+        
             <a href="#skills " className="nav-link">
               Skills
             </a>
+            <a href="#services" className="nav-link">
+              Services
+            </a>
             <a href="#projects" className="nav-link">
               Projects
+            </a>
+            <a href="#Education" className="nav-link">
+              Education
             </a>
             <a href="#contact" className="nav-link">
               Contact

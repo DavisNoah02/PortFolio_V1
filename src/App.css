@@ -180,3 +180,37 @@
     transform: translateY(-2px);
     background: rgba(99, 102, 241, 0.2);
   }
+
+/* Education Section Styling */
+#education {
+  background-color: #0a0b0e; /* Dark background color */
+  color: #e2e8f0; /* Light text color */
+}
+
+#education .border-blue-500 {
+  border-color: #3b82f6;
+}
+
+#education .bg-gray-800 {
+  background-color: #2d3748;
+}
+
+#education .text-blue-500 {
+  color: #3b82f6;
+}
+
+#education .text-gray-300 {
+  color: #d1d5db;
+}
+
+#education .text-gray-400 {
+  color: #a0aec0;
+}
+
+#education .shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+#education .rounded-lg {
+  border-radius: 0.5rem;
+}
