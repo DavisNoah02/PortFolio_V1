@@ -1,4 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import todoListImg from "../../assets/images/todolist.png";
+import quoteGenImg from "../../assets/images/QuoteGen.png";
 
 export const Projects = () => {
   return (
@@ -83,20 +85,21 @@ export const Projects = () => {
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all "
             >
-              <h3 className="text-xl font-bold mb-2">Cloud Platform</h3>
+              <h3 className="text-xl font-bold mb-2">To-Do List</h3>
                {/* Project Image */}
                <img
-                src="your-image-url.jpg"
-                alt="Cloud Platform Preview"
+                src={todoListImg}
+                alt="To-Do list Application"
                 className="w-full h-48 object-cover rounded-lg mb-4"
+                loading="lazy"
               />
               <p className="text-gray-400 mb-4">
-                Scalable cloud infrastructure management with real-time monitoring and automated scaling.
+                A To-Do List application that allows users to create, read, update and delete tasks. Users can also mark tasks as completed and view the completion status.
               </p>
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["React", "Node.js", "AWS", "Docker"].map((tech, key) => (
+                {["HTML5", "CSS3", "JavaScript","localStorage"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
@@ -110,7 +113,8 @@ export const Projects = () => {
               {/* Buttons */}
               <div className="flex justify-start items-center space-x-8 my-8">
                 <a
-                  href="#"
+                  href="https://noa-to-do-app.netlify.app/"
+                  target="blank"
                   className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
                 >
                   View Live
@@ -145,20 +149,21 @@ export const Projects = () => {
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all "
             >
-              <h3 className="text-xl font-bold mb-2">Cloud Platform</h3>
+              <h3 className="text-xl font-bold mb-2">Quote Generator</h3>
                {/* Project Image */}
                <img
-                src="your-image-url.jpg"
-                alt="Cloud Platform Preview"
+                src={quoteGenImg}
+                alt="A Quote Generator app"
                 className="w-full h-48 object-cover rounded-lg mb-4"
+                loading="lazy"
               />
               <p className="text-gray-400 mb-4">
-                Scalable cloud infrastructure management with real-time monitoring and automated scaling.
+                Generate and share inspiring quotes with just a click, featuring customizable styles and themes.
               </p>
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["React", "Node.js", "AWS", "Docker"].map((tech, key) => (
+                {["Reactjs", "api", "css"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
@@ -171,13 +176,14 @@ export const Projects = () => {
               {/* Buttons */}
               <div className="flex justify-start items-center space-x-8 my-8">
                 <a
-                  href="#"
+                  href="https://noa-quote-generator.netlify.app/"
+                  target="blank"
                   className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
                 >
                   View Live
                 </a>
                 <a
-                href="#"
+                href="https://github.com/DavisNoah02/react-qoute-generator.git"
                 className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-base tracking-wide active:scale-95 transition-transform duration-300"
               >
                 {/* Black overlay that slides away on hover */}

@@ -1,6 +1,35 @@
 import { Radar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { RevealOnScroll } from "../RevealOnScroll";
+import { FaHtml5, FaCss3Alt,FaDatabase,FaNetworkWired, FaCode, FaCogs, FaReact, FaBootstrap, FaNodeJs, FaAws, FaGit, FaGithub, FaFigma, FaDocker } from 'react-icons/fa';
+import { SiTypescript, SiTailwindcss, SiFirebase, SiMongodb, SiPostman, SiNetlify, SiVercel, SiCanva, SiJsonwebtokens, SiYaml } from 'react-icons/si';
+
+const skillIcons = {
+  HTML5: <FaHtml5 className="text-orange-600" />,
+  CSS3: <FaCss3Alt className="text-blue-600" />,
+  React: <FaReact className="text-cyan-500" />,
+  TypeScript: <SiTypescript className="text-blue-500" />,
+  TailwindCSS: <SiTailwindcss className="text-teal-400" />,
+  Bootstrap: <FaBootstrap className="text-purple-600" />,
+  Json: <SiJsonwebtokens className="text-yellow-500" />,
+  SQL: <FaDatabase className="text-gray-600" />,
+  "Node.js": <FaNodeJs className="text-green-500" />,
+  Firebase: <SiFirebase className="text-yellow-500" />,
+  AWS: <FaAws className="text-orange-500" />,
+  MongoDB: <SiMongodb className="text-green-500" />,
+  "REST Api's": <FaNetworkWired className="text-blue-500" />,
+  Yaml: <SiYaml className="text-gray-500" />,
+  Git: <FaGit className="text-red-500" />,
+  GitHub: <FaGithub className="text-black" />,
+  VSCode: <FaCode className="text-blue-500" />,
+  Netlify: <SiNetlify className="text-teal-500" />,
+  Vercel: <SiVercel className="text-black" />,
+  Postman: <SiPostman className="text-orange-500" />,
+  "Github Actions": <FaGithub className="text-blue-500" />,
+  "CI/CD": <FaCogs className="text-gray-500" />,
+  Figma: <FaFigma className="text-pink-500" />,
+  Canva: <SiCanva className="text-blue-500" />,
+};
 
 export const Skills = () => {
   // Proficiency levels (0-100) for each category
@@ -135,9 +164,9 @@ const SkillCategory = ({ title, skills, color }) => (
       {skills.map((skill) => (
         <span 
           key={skill}
-          className="px-3 py-1 text-sm rounded-full bg-gray-700/50 text-gray-300"
+          className="flex items-center px-3 py-1 text-sm rounded-full bg-gray-700/50 text-gray-300"
         >
-          {skill}
+          {skillIcons[skill]} <span className="ml-2">{skill}</span>
         </span>
       ))}
     </div>
