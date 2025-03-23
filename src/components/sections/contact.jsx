@@ -3,6 +3,8 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,10 @@ export const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // console.log("Service ID:", import.meta.env.VITE_SERVICE_ID);
+    // console.log("Template ID:", import.meta.env.VITE_TEMPLATE_ID);
+    // console.log("Public Key:", import.meta.env.VITE_PUBLIC_KEY);
+
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
@@ -22,11 +28,14 @@ export const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        alert("Message Sent!");
+        toast.success("Message Sent!");
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
-  };
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        toast.error("Oops! Something went wrong. Please try again.");
+      });
+  }
 
   return (
     <section
@@ -121,6 +130,7 @@ export const Contact = () => {
           </div>
         </div>
       </RevealOnScroll>
+      <ToastContainer />
     </section>
   );
 };
