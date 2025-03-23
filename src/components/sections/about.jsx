@@ -20,7 +20,7 @@ export const About = () => {
       {/* Profile Image */}
       <div className="md:w-1/2 flex justify-center md:order-2 mb-8 md:mb-0">
         <img
-          src="/src/assets/images/profile1.jpg"
+          src="/public/profile1.jpg"
           alt="Profile"
           className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-lg border-4 border-green-500"
           loading="lazy"
