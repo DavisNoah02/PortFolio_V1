@@ -24,7 +24,7 @@ export const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen flex items-center justify-center py-20 bg-gray-900 text-white"
+      className="min-h-screen flex items-center justify-center py-20 bg-gray-400 text-white"
     >
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">
