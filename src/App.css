@@ -98,14 +98,15 @@
   background-color: rgba(6, 141, 141, 0.5);
 }
 
-/* RESUME */
+/* RESUME btn*/
 /* From Uiverse.io by andrew-demchenk0 */ 
 .button {
   position: relative;
   width: 150px;
-  height: 40px;
+  height: 45px;
   cursor: pointer;
   display: flex;
+  border-radius: 10px;
   align-items: center;
   border: 1px solid #12d607;
   background-color: #362184;
@@ -185,7 +186,7 @@
 
 /* Education Section Styling */
 #education {
-  background-color: #0a0b0e; /* Dark background color */
+  background-color: #1a2e45; 
   color: #e2e8f0; /* Light text color */
 }
 

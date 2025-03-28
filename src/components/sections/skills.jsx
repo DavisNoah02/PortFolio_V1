@@ -95,7 +95,7 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen flex items-center justify-center py-20  "
+      className="min-h-screen flex items-center justify-center py-14  "
     >
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4 glass p-6 rounded-xl border border-blue-500/40 

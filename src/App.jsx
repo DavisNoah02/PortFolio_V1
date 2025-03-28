@@ -9,6 +9,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 // import { loadFull } from "tsparticles";
 // import Particles from "react-tsparticles";
 import { About } from "./components/sections/about";
+import { Services } from "./components/sections/services";
 import { Projects } from "./components/sections/projects";
 import "./index.css";
 import { Contact } from "./components/sections/contact";
@@ -31,6 +32,7 @@ function App() {
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <About />
           <Skills/>
+          <Services/>
           <Projects />
           <Education/>
           <Contact />
