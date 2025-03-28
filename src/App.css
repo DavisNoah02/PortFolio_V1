@@ -8,13 +8,14 @@
   background: linear-gradient(to right, #2506f0 0, #70cef3 10%, #193fe6 20%);
   background-position: 0;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shine 3s infinite linear;
   animation-fill-mode: forwards;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 10px;
   text-decoration: none;
   white-space: nowrap;
   font-family: "Poppins", sans-serif;

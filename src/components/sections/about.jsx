@@ -82,7 +82,7 @@ export const About = () => {
             >
               <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-              <span className="relative z-10 block px-4 py-3 rounded-xl bg-cyan-950">
+              <span className="relative z-10 block w-full px-4 py-3 rounded-xl bg-cyan-950 md:w-auto md:px-4 md:py-3">
                 <div className="relative z-10 flex items-center space-x-2">
                   <span className="transition-all duration-500 group-hover:translate-x-1">
                     Connect with me

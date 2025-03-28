@@ -6,21 +6,25 @@ export const Services = () => {
       title: "Web Development",
       description: "Building responsive and scalable web applications using modern technologies.",
       icon: "🌐",
+      link: "#web-development",
     },
     {
       title: "IT Consulting",
       description: "Providing expert advice and solutions to improve your IT infrastructure.",
       icon: "💼",
+      link: "#it-consulting",
     },
     {
       title: "Technical Writing",
       description: "Creating clear and concise technical documentation and tutorials.",
       icon: "✍️",
+      link: "#technical-writing",
     },
     {
       title: "SEO Optimization",
       description: "Improving your website's visibility and ranking on search engines.",
       icon: "🔍",
+      link: "#seo-optimization",
     },
   ];
 
@@ -39,11 +43,18 @@ export const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all text-center"
+                className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all text-center bg-gray-900 hover:shadow-lg hover:shadow-blue-500/50"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                {/* Learn More Button */}
+                <a
+                  href={service.link}
+                  className="inline-block px-4 py-2 text-sm font-semibold text-white bg-teal-900 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                >
+                  Learn More
+                </a>
               </div>
             ))}
           </div>
