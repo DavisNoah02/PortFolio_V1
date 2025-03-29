@@ -92,7 +92,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
 
       {/* Github Profile Button */}
       <a
-  href="https://github.com/DavisNoah02" // Replace with your GitHub profile URL
+  href="https://github.com/DavisNoah02" 
   target="_blank"
   rel="noopener noreferrer"
   className="btn-github flex items-center space-x-2"
