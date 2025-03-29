@@ -1,6 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import todoListImg from "../../assets/images/todolist.png";
-import quoteGenImg from "../../assets/images/QuoteGen.png";
+import todoListImg from "/public/images/todolist.png";
+import quoteGenImg from "/public/images/QuoteGen.png";
 
 export const Projects = () => {
   return (

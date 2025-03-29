@@ -15,23 +15,23 @@ export const About = () => {
   return (
     <section
       id="about"
-     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative"
+     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative  pt-20"
     >
       {/* Profile Image */}
-      <div className="md:w-1/2 flex justify-center md:order-2 mb-8 md:mb-0">
+      <div className="md:w-1/2 flex justify-center md:order-1 mb-8 md:mb-0">
         <img
-          src="/public/profile1.jpg"
-          alt="Profile"
+          src="/profile1.jpg"
+          alt="noa-dave Profile pic"
           className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-lg border-4 border-green-500"
-          loading="lazy"
+          loading="auto"
         />
       </div>
 
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
-          <h1 className="text-5xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
-            Hi, I'm <span className="text-white">{Bio.name}</span>
-          </h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+            Hi, I'm <span >{Bio.name}</span>
+        </h1>
 
           {/* Typewriter Effect */}
           <div className="mt-4 text-xl sm:text-2xl font-semibold">

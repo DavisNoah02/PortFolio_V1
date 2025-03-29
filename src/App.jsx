@@ -13,6 +13,7 @@ import { Services } from "./components/sections/services";
 import { Projects } from "./components/sections/projects";
 import "./index.css";
 import { Contact } from "./components/sections/contact";
+import { Footer } from "./components/footer";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           <Projects />
           <Education/>
           <Contact />
+          <Footer/>
 
         </div>
       )}

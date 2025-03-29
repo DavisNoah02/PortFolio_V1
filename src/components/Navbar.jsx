@@ -9,9 +9,9 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav className="fixed top-0 w-full z-40 bg-[rgba(35, 159, 109, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a href="#about" className="btn-shine font-mono text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+          <a href="#about" className="btn-shine font-mono text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold ">
             {" "}
-            <span className="text-green-500 text-2xl">noa.dave</span>{" "}
+            <span className=" text-2xl">noa.dave</span>{" "}
           </a>
 
           <div

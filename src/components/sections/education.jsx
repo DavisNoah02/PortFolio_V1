@@ -9,7 +9,7 @@ export const Education = () => {
       institution: "Chuka University",
       description: "Specializing in Artificial Intelligence and Machine Learning.",
       grade: "2nd Class Honors Upper Division",
-      iconSrc: "/src/assets/images/Chuka.jpeg", 
+      iconSrc: "/public/images/Chuka.jpeg", 
     },
     {
       year: "2021 May - 2021 Aug",
@@ -17,7 +17,7 @@ export const Education = () => {
       institution: "Strathmore University",
       description: "Focused on software development and data structures.",
       grade: "PASS",
-      iconSrc: "/src/assets/images/Strathmore.png", 
+      iconSrc: "/public/images/Strathmore.png", 
     },
   ];
 
