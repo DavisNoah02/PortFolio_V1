@@ -25,7 +25,7 @@ export const Projects = () => {
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all "
             >
-              <h3 className="text-xl font-bold mb-2">My Personal Portfolio</h3>
+              <h3 className="text-xl font-bold mb-2">PERSONAL PORTFOLIO</h3>
                {/* Project Image */}
                <img
                 src={myportfolioImg}
@@ -92,7 +92,7 @@ export const Projects = () => {
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all "
             >
-              <h3 className="text-xl font-bold mb-2">To-Do List</h3>
+              <h3 className="text-xl font-bold mb-2">SIMPLE TO-DO LIST</h3>
                {/* Project Image */}
                <img
                 src={todoListImg}
@@ -157,7 +157,7 @@ export const Projects = () => {
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all "
             >
-              <h3 className="text-xl font-bold mb-2">Quote Generator</h3>
+              <h3 className="text-xl font-bold mb-2">QUOTE GENERATOR</h3>
                {/* Project Image */}
                <img
                 src={quoteGenImg}
@@ -166,7 +166,7 @@ export const Projects = () => {
                 loading="lazy"
               />
               <p className="text-gray-400 mb-4">
-                Generate and share inspiring quotes with just a click, featuring customizable styles and themes.
+              Generate and share inspiring quotes with just a click, featuring customizable styles and themes. This application allows users to explore a wide variety of motivational and thought-provoking quotes.
               </p>
 
               {/* Technologies Used */}
@@ -212,7 +212,8 @@ export const Projects = () => {
                 </a>
               </div>
             </div>
-
+              
+              
 
             {/* Project 4 */}
             <div
@@ -225,8 +226,8 @@ export const Projects = () => {
               <h3 className="text-xl font-bold mb-2"> EDUVERSE LMS</h3>
                {/* Project Image */}
                <img
-                src={todoListImg}
-                alt="To-Do list Application"
+                
+                alt="Learning Mgt System"
                 className="w-full h-48 object-cover rounded-lg mb-4"
                 loading="lazy"
               />
@@ -256,8 +257,53 @@ export const Projects = () => {
                   Coming Soon
                 </button>
               </div>
-
             </div>
+
+            {/* Project 5 */}
+            <div
+              className="
+                 glass p-6 rounded-xl border border-purple-500/40 
+                 hover:-translate-y-1 hover:border-purple-500/60 
+                 hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
+                 transition-all "
+            >
+              <h3 className="text-xl font-bold mb-2"> AI TEXT-IMAGE GENERATOR</h3>
+               {/* Project Image */}
+               <img
+                
+                alt="Dall-e image Generator"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
+              <p className="text-gray-400 mb-4">
+              An AI Image Generator,a  web application that utilizes the DALL-E API to create unique and visually stunning images based on user-provided text descriptions. 
+              </p>
+
+              {/* Technologies Used */}
+              <div className="flex flex-wrap gap-4 mb-4">
+                {["React.js","TailwindCSS", "Express.js", "Node.js","Heroku", "Firebase Auth" ].map((tech, key) => (
+                  <span
+                    key={key}
+                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
+                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="flex justify-start items-center space-x-8 my-8">
+                <button
+                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium text-base tracking-wide animate-pulse shadow-md hover:shadow-lg transition-transform duration-300"
+                  disabled
+                >
+                  Coming Soon
+                </button>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </RevealOnScroll>
