@@ -1,6 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import todoListImg from "/images/todolist.png";
 import quoteGenImg from "/images/QuoteGen.png";
+import myportfolioImg from "/images/portfolio.png";
 
 export const Projects = () => {
   return (
@@ -15,28 +16,30 @@ export const Projects = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+
             {/* Project 1 */}
             <div
               className="
-                glass p-6 rounded-xl border border-purple-500/40 
+                 glass p-6 rounded-xl border border-purple-500/40 
                  hover:-translate-y-1 hover:border-purple-500/60 
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all "
             >
-              <h3 className="text-xl font-bold mb-2">Cloud Platform</h3>
+              <h3 className="text-xl font-bold mb-2">My Personal Portfolio</h3>
                {/* Project Image */}
                <img
-                src="your-image-url.jpg"
-                alt="Cloud Platform Preview"
+                src={myportfolioImg}
+                alt="My personal Portfolio"
                 className="w-full h-48 object-cover rounded-lg mb-4"
+                loading="lazy"
               />
               <p className="text-gray-400 mb-4">
-                Scalable cloud infrastructure management with real-time monitoring and automated scaling.
+              A comprehensive showcase of my skills, expertise, and projects as a web developer. Designed with a focus on responsiveness and user experience, it highlights my ability to create visually appealing and functional web applications.
               </p>
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["React", "Node.js", "AWS", "Docker"].map((tech, key) => (
+                {["Reactjs", "TailwindCSS", "Framer Motion","Vite"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
@@ -46,16 +49,19 @@ export const Projects = () => {
                   </span>
                 ))}
               </div>
+
               {/* Buttons */}
               <div className="flex justify-start items-center space-x-8 my-8">
                 <a
-                  href="#"
+                  href="https://noa-dave.vercel.app/"
+                  target="blank"
                   className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition"
                 >
                   View Live
                 </a>
                 <a
-                href="#"
+                href="https://github.com/DavisNoah02/PortFolio_V1.git"
+                target="blank"
                 className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-base tracking-wide active:scale-95 transition-transform duration-300"
               >
                 {/* Black overlay that slides away on hover */}
@@ -75,6 +81,7 @@ export const Projects = () => {
               </a>
               </div>
             </div>
+
 
 
              {/* Project 2 */}
@@ -120,7 +127,8 @@ export const Projects = () => {
                   View Live
                 </a>
                 <a
-                href="#"
+                href="https://github.com/DavisNoah02/To-Do-List_Web-App"
+                target="_blank"	
                 className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-base tracking-wide active:scale-95 transition-transform duration-300"
               >
                 {/* Black overlay that slides away on hover */}
@@ -184,6 +192,7 @@ export const Projects = () => {
                 </a>
                 <a
                 href="https://github.com/DavisNoah02/react-qoute-generator.git"
+                target="blank"
                 className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium text-base tracking-wide active:scale-95 transition-transform duration-300"
               >
                 {/* Black overlay that slides away on hover */}
@@ -204,6 +213,51 @@ export const Projects = () => {
               </div>
             </div>
 
+
+            {/* Project 4 */}
+            <div
+              className="
+                 glass p-6 rounded-xl border border-purple-500/40 
+                 hover:-translate-y-1 hover:border-purple-500/60 
+                 hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
+                 transition-all "
+            >
+              <h3 className="text-xl font-bold mb-2"> EDUVERSE LMS</h3>
+               {/* Project Image */}
+               <img
+                src={todoListImg}
+                alt="To-Do list Application"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
+              <p className="text-gray-400 mb-4">
+              A Learning Management System (LMS) is a platform designed to facilitate online education and training. It allows educators to create, manage, and deliver courses, while enabling learners to access educational content, track progress, and interact with instructors and peers.
+              </p>
+
+              {/* Technologies Used */}
+              <div className="flex flex-wrap gap-4 mb-4">
+                {["React.js", "Context API","TailwindCSS","Axios", "Express.js", "Node.js", "MongoDB","Cloudinary" ].map((tech, key) => (
+                  <span
+                    key={key}
+                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
+                      hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="flex justify-start items-center space-x-8 my-8">
+                <button
+                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium text-base tracking-wide animate-pulse shadow-md hover:shadow-lg transition-transform duration-300"
+                  disabled
+                >
+                  Coming Soon
+                </button>
+              </div>
+
+            </div>
           </div>
         </div>
       </RevealOnScroll>
