@@ -34,7 +34,7 @@ export const Footer = () => {
      
       <hr className="border-t border-gray-600 w-3/4 mx-auto mb-3" />
 
-      <footer className="bg-gray-900 text-white py-8 text-center">
+      <footer className="bg-gray-900 text-white py-4 text-center">
         <h1 className="text-2xl font-bold mb-4 text-blue-300"> Noah Dave </h1>
   
         {/* Greeting with Date */}
