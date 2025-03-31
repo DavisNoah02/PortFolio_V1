@@ -39,7 +39,7 @@ export const Projects = () => {
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["Reactjs", "TailwindCSS", "Framer Motion","Vite"].map((tech, key) => (
+                {["Reactjs", "TailwindCSS", "Framer Motion","Vite", "emiljs-com"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
@@ -106,7 +106,7 @@ export const Projects = () => {
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["HTML5", "CSS3", "JavaScript","localStorage"].map((tech, key) => (
+                {["HTML5", "CSS3", "Vanilla-JavaScript","localStorage"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
@@ -171,7 +171,7 @@ export const Projects = () => {
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["Reactjs", "api", "css"].map((tech, key) => (
+                {["Reactjs", "Quotable-api", "css"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
@@ -232,7 +232,7 @@ export const Projects = () => {
                 loading="lazy"
               />
               <p className="text-gray-400 mb-4">
-              A Learning Management System (LMS) is a platform designed to facilitate online education and training. It allows educators to create, manage, and deliver courses, while enabling learners to access educational content, track progress, and interact with instructors and peers.
+              A Learning Management System (LMS), a platform designed to facilitate online education and training. It allows educators to create, manage, and deliver courses, while enabling learners to access educational content, track progress, and interact with instructors and peers.
               </p>
 
               {/* Technologies Used */}
@@ -281,7 +281,7 @@ export const Projects = () => {
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["React.js","TailwindCSS", "Express.js", "Node.js","Heroku", "Firebase Auth" ].map((tech, key) => (
+                {["React.js","TailwindCSS", "Express.js", "Node.js","Heroku", "Firebase Auth","Dall-e API" ].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
