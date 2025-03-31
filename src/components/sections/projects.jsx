@@ -39,7 +39,7 @@ export const Projects = () => {
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["Reactjs", "TailwindCSS", "Framer Motion","Vite", "emiljs-com"].map((tech, key) => (
+                {["Reactjs", "TailwindCSS", "Framer Motion","Vite", "Emailjs-com"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
