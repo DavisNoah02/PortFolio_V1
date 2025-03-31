@@ -61,7 +61,7 @@ export const Contact = () => {
             </p>
             <p className="text-white mb-4 flex items-center">
               <FontAwesomeIcon icon={faPhone} className="mr-6 text-3xl" />
-              +254 729239023
+              +254 729-239-023
             </p>
             <p className="text-white flex items-center">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-6 text-3xl" />
