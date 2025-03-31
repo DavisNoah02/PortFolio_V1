@@ -50,7 +50,7 @@ export const Services = () => {
                 <p className="text-gray-300 mb-4 text-left">{service.description}</p>
                 
                 <a
-                  href={`https://wa.me/+254786923401?text=Hi%20Noah%2C%20I%27m%20interested%20in%20a%20project`}
+                  href={`https://wa.me/+254729239023?text=Hi%20Noah%2C%20I%27m%20interested%20in%20a%20project`}
                   target="_blank"
                   className="inline-block px-4 py-2 text-sm font-semibold text-white bg-teal-900 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
                 >
