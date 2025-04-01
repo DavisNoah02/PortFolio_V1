@@ -42,9 +42,9 @@ export const Navbar = ({ setMenuOpen }) => {
               onMouseLeave={() => setDropdownOpen(false)}
             >
               <div
-                className="selected bg-gray-600 text-white px-4 py-1 rounded flex items-center justify-between cursor-pointer "
+                className="selected bg--600 text-white px-4 py-1 rounded flex items-center justify-between cursor-pointer hover:text-[#5966f7]"
               >
-                Blog
+                Blogs
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="1em"
@@ -60,7 +60,7 @@ export const Navbar = ({ setMenuOpen }) => {
                 </svg>
               </div>
               {dropdownOpen && (
-                <div className="options absolute top-full mt-2 bg-gray-800 text-white rounded shadow-lg py-2 w-40">
+                <div className="options absolute top-full mt-0 bg-gray-800 text-white rounded shadow-lg py-1 w-30 z-50">
                   <a
                     href="https://hashnode.com/@noadave"
                     target="_blank"
@@ -73,7 +73,7 @@ export const Navbar = ({ setMenuOpen }) => {
                     href="https://medium.com/@noahdavemunene"
                     target="_blank"
                     rel="noreferrer"
-                    className="block px-4 py-2 hover:bg-gray-500 rounded"
+                    className="block px-4 py-2 hover:bg-gray-700 rounded"
                   >
                     Medium
                   </a>

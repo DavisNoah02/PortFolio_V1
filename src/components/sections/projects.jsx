@@ -184,7 +184,7 @@ export const Projects = () => {
                     {tech}
                   </span>
                 ))}
-                
+                git 
               </div>
               <div className="flex-grow"></div>
               {/* Buttons */}
