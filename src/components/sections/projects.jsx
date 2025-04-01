@@ -14,16 +14,17 @@ export const Projects = () => {
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             My Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 
 
             {/* Project 1 */}
             <div
-              className="
-                 glass p-6 rounded-xl border border-purple-500/40 
-                 hover:-translate-y-1 hover:border-purple-500/60 
-                 hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
-                 transition-all "
+               className="
+               glass p-6 rounded-xl border border-purple-500/40 
+               hover:-translate-y-1 hover:border-purple-500/60 
+               hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
+               transition-all flex flex-col h-full
+             "
             >
               <h3 className="text-xl font-bold mb-2">PERSONAL PORTFOLIO</h3>
                {/* Project Image */}
@@ -39,7 +40,7 @@ export const Projects = () => {
 
               {/* Technologies Used */}
               <div className="flex flex-wrap gap-4 mb-4">
-                {["Reactjs", "TailwindCSS", "Framer Motion","Vite", "Emailjs-com"].map((tech, key) => (
+                {["Reactjs", "TailwindCSS", "Framer Motion","Vite", "Emailjs-com", "Chart.js"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
@@ -49,9 +50,10 @@ export const Projects = () => {
                   </span>
                 ))}
               </div>
+              <div className="flex-grow"></div>
 
               {/* Buttons */}
-              <div className="flex justify-start items-center space-x-8 my-8">
+              <div className="flex justify-start items-center space-x-8 mt-auto">
                 <a
                   href="https://noa-dave.vercel.app/"
                   target="blank"
@@ -86,11 +88,12 @@ export const Projects = () => {
 
              {/* Project 2 */}
              <div
-              className="
-                 glass p-6 rounded-xl border border-purple-500/40 
-                 hover:-translate-y-1 hover:border-purple-500/60 
-                 hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
-                 transition-all "
+               className="
+               glass p-6 rounded-xl border border-purple-500/40 
+               hover:-translate-y-1 hover:border-purple-500/60 
+               hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
+               transition-all flex flex-col h-full
+             "
             >
               <h3 className="text-xl font-bold mb-2">SIMPLE TO-DO LIST</h3>
                {/* Project Image */}
@@ -116,9 +119,9 @@ export const Projects = () => {
                   </span>
                 ))}
               </div>
-
+              <div className="flex-grow"></div>
               {/* Buttons */}
-              <div className="flex justify-start items-center space-x-8 my-8">
+              <div className="flex justify-start items-center space-x-8 mt-auto">
                 <a
                   href="https://noa-to-do-app.netlify.app/"
                   target="blank"
@@ -151,11 +154,12 @@ export const Projects = () => {
 
                         {/* Project 3 */}
             <div
-              className="
-                glass p-6 rounded-xl border border-purple-500/40 
-                 hover:-translate-y-1 hover:border-purple-500/60 
-                 hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
-                 transition-all "
+               className="
+               glass p-6 rounded-xl border border-purple-500/40 
+               hover:-translate-y-1 hover:border-purple-500/60 
+               hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
+               transition-all flex flex-col h-full
+             "
             >
               <h3 className="text-xl font-bold mb-2">QUOTE GENERATOR</h3>
                {/* Project Image */}
@@ -180,9 +184,11 @@ export const Projects = () => {
                     {tech}
                   </span>
                 ))}
+                
               </div>
+              <div className="flex-grow"></div>
               {/* Buttons */}
-              <div className="flex justify-start items-center space-x-8 my-8">
+              <div className="flex justify-start items-center space-x-8 my-auto">
                 <a
                   href="https://noa-quote-generator.netlify.app/"
                   target="blank"
@@ -217,11 +223,12 @@ export const Projects = () => {
 
             {/* Project 4 */}
             <div
-              className="
-                 glass p-6 rounded-xl border border-purple-500/40 
-                 hover:-translate-y-1 hover:border-purple-500/60 
-                 hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
-                 transition-all "
+               className="
+               glass p-6 rounded-xl border border-purple-500/40 
+               hover:-translate-y-1 hover:border-purple-500/60 
+               hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
+               transition-all flex flex-col h-full
+             "
             >
               <h3 className="text-xl font-bold mb-2"> EDUVERSE LMS</h3>
                {/* Project Image */}
@@ -249,7 +256,7 @@ export const Projects = () => {
               </div>
 
               {/* Buttons */}
-              <div className="flex justify-start items-center space-x-8 my-8">
+              <div className="flex justify-start items-center space-x-8 my-auto">
                 <button
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium text-base tracking-wide animate-pulse shadow-md hover:shadow-lg transition-transform duration-300"
                   disabled
@@ -259,13 +266,17 @@ export const Projects = () => {
               </div>
             </div>
 
+
+
+
             {/* Project 5 */}
             <div
-              className="
-                 glass p-6 rounded-xl border border-purple-500/40 
-                 hover:-translate-y-1 hover:border-purple-500/60 
-                 hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
-                 transition-all "
+               className="
+               glass p-6 rounded-xl border border-purple-500/40 
+               hover:-translate-y-1 hover:border-purple-500/60 
+               hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
+               transition-all flex flex-col h-full
+             "
             >
               <h3 className="text-xl font-bold mb-2"> AI TEXT-IMAGE GENERATOR</h3>
                {/* Project Image */}
@@ -291,9 +302,9 @@ export const Projects = () => {
                   </span>
                 ))}
               </div>
-
+              <div className="flex-grow"></div>
               {/* Buttons */}
-              <div className="flex justify-start items-center space-x-8 my-8">
+              <div className="flex justify-start items-center space-x-8 my-auto">
                 <button
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium text-base tracking-wide animate-pulse shadow-md hover:shadow-lg transition-transform duration-300"
                   disabled
