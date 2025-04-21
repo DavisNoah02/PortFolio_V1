@@ -9,7 +9,7 @@ import { Education } from "./components/sections/education";
 // import { loadFull } from "tsparticles";
 // import Particles from "react-tsparticles";
 import { About } from "./components/sections/about";
-import { Socials } from "./components/Socials";
+import { Socials } from "./components/socials";
 import { Services } from "./components/sections/services";
 import { Projects } from "./components/sections/projects";
 import "./index.css";
