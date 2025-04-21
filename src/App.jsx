@@ -9,6 +9,7 @@ import { Education } from "./components/sections/education";
 // import { loadFull } from "tsparticles";
 // import Particles from "react-tsparticles";
 import { About } from "./components/sections/about";
+import { Socials } from "./components/Socials";
 import { Services } from "./components/sections/services";
 import { Projects } from "./components/sections/projects";
 import "./index.css";
@@ -23,7 +24,7 @@ function App() {
 
   return (
     
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen  text-gray-100">
        
      
       {!isLoaded ? (
@@ -32,6 +33,7 @@ function App() {
         <div className="transition-opacity duration-700 opacity-100">
           <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          
           <About />
           <Skills/>
           <Services/>
@@ -40,6 +42,7 @@ function App() {
           <Contact />
           <WhatsAppButton />
           <Footer/>
+          <Socials />
 
         </div>
       )}

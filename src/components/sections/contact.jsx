@@ -40,7 +40,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-[90vh] flex items-center justify-center py-12"
+      className="min-h-[90vh] flex items-center justify-center py-12 "
     >
       <RevealOnScroll>
         <div className="flex flex-col md:flex-row w-full max-w-4xl px-4">

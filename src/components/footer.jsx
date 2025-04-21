@@ -31,21 +31,29 @@ export const Footer = () => {
 
   return (
     <>
-     
       <hr className="border-t border-gray-600 w-3/4 mx-auto mb-3" />
-
-      <footer className="bg-gray-900 text-white py-4 text-center">
-        <h1 className="text-2xl font-bold mb-4 text-blue-300"> Noah Dave </h1>
+  
+      <footer className="bg-gradient-custom text-white py-6 text-center space-y-4">
+        <h1 className="text-2xl font-bold text-blue-600">Noah Dave Munene</h1>
+  
+        {/* Responsive Nav Links */}
+        <nav className="flex flex-wrap justify-center gap-8 text-lg font-medium text-gray-400">
+          {["About", "Skills", "Projects", "Education","Certificates", "Contact"].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="hover:text-white transition-colors duration-300"
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
   
         {/* Greeting with Date */}
-        <p className="text-base text-gray-300 mt-2">
-          {greeting}, {formattedDate}
-        </p>
+        <p className="text-base text-gray-300">{greeting}, {formattedDate}</p>
   
         {/* Copyright */}
-        <p className="text-sm text-gray-400 mt-6">
-          © {currentYear} Noah Dave. All rights reserved.
-        </p>
+        <p className="text-sm text-gray-400">© {currentYear} Noah Dave. All rights reserved.</p>
       </footer>
     </>
   );

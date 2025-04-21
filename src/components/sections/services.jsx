@@ -31,10 +31,10 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="min-h-screen flex items-center justify-center py-20 bg-gray-800"
+      className=" flex items-center justify-center py- bg-gradient-custom min-h-screen"
     >
       <RevealOnScroll>
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-5">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center py-10">
             Services I Offer
           </h2>
@@ -43,7 +43,7 @@ export const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all text-center bg-gray-900 hover:shadow-lg hover:shadow-blue-500/50"
+                className="p-6 rounded-xl border border-white/10 text-center bg-gray-900 shadow-md shadow-blue-500/50 hover:shadow-lg hover:shadow-blue-500/80 transition-all"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>

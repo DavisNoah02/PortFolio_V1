@@ -5,8 +5,17 @@ body {
   margin: 0;  
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
-  background: #181819;
-  color: #f3f4f6;
+  background: linear-gradient(to left, #301e3a, #1c0d3f);
+  color: white; /* Optional: set text color */
+  font-family: Arial, sans-serif; /* Optional: set a default font */
+}
+/* education + footer */
+.bg-gradient-custom {
+  background: linear-gradient(to right, #150c2a, #270c52);
+}
+/* skills + Services */
+.bg-gradient-custom2 {
+  background: linear-gradient(to left, #102134, #1c0b37);
 }
 
 @layer utilities {

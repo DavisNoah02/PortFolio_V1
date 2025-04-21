@@ -95,9 +95,9 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen flex items-center justify-center py-14  "
+      className="min-h-screen flex items-center justify-center pt-34 pb-6  bg-gradient-custom"
     >
-      <RevealOnScroll>
+      <RevealOnScroll direction="up">
         <div className="max-w-3xl mx-auto px-4 glass p-6 rounded-xl border border-blue-500/40 
                  hover:-translate-y-1 hover:border-white-500/60 
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]

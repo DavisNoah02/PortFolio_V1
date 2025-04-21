@@ -113,6 +113,9 @@
   background-color: #362184;
   overflow: hidden;
 }
+.shadow-custom-dark {
+  box-shadow: 0 8px 32px 0 rgba(35, 35, 70, 0.85), 0 1.5px 4px 0 rgba(81, 35, 35, 0.7);
+}
 
 .button, .button__icon, .button__text {
   transition: all 0.3s;
@@ -187,7 +190,7 @@
 
 /* Education Section Styling */
 #education {
-  background-color: #1a2e45; 
+
   color: #e2e8f0; /* Light text color */
 }
 
@@ -196,7 +199,7 @@
 }
 
 #education .bg-gray-800 {
-  background-color: #2d3748;
+  background-color: #391f58;
 }
 
 #education .text-blue-500 {
@@ -219,4 +222,51 @@
   border-radius: 0.5rem;
 }
 
+/* Profile img */
+:root {
+  --green: #64ffda;
+  --navy: #0a192f;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
 
+/* img */
+.wrapper::before,
+.wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.wrapper::before {
+  top: 14px;
+  left: 14px;
+  background-color: var(--navy);
+  border: 2px solid var(--green);
+  mix-blend-mode: screen;
+}
+
+.wrapper::after {
+  border: 2px solid var(--green);
+  top: 14px;
+  left: 14px;
+  z-index: -1;
+}
+
+.wrapper:hover .img,
+.wrapper:focus .img {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
