@@ -4,8 +4,8 @@ export const Navbar = ({ setMenuOpen }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(121, 160, 144, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
-      <div className="max-w-5xl mx-auto px-4">
+    <nav className="fixed top-0 w-full  z-40 bg-[rgba(121, 160, 144, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+      <div className="max-w-6xl mx-auto px-8">
         <div className="flex justify-between items-center h-16">
           <a href="#about" className="btn-shine font-mono text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold">
             <span className="text-2xl">noa.dave</span>
@@ -18,7 +18,7 @@ export const Navbar = ({ setMenuOpen }) => {
             &#9776;
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <a href="#about" className="nav-link">
               About
             </a>
@@ -27,6 +27,9 @@ export const Navbar = ({ setMenuOpen }) => {
             </a>
             <a href="#projects" className="nav-link">
               Projects
+            </a>
+            <a href="#certifications" className="nav-link">
+             Certifications
             </a>
             <a href="#education" className="nav-link">
               Education
@@ -65,7 +68,7 @@ export const Navbar = ({ setMenuOpen }) => {
                     href="https://hashnode.com/@noadave"
                     target="_blank"
                     rel="noreferrer"
-                    className="block px-4 py-2 hover:bg-gray-700 rounded"
+                    className="block px-4 py-2 hover: rounded hover:text-purple-400 transition-colors"
                   >
                     Hashnode
                   </a>
@@ -73,7 +76,7 @@ export const Navbar = ({ setMenuOpen }) => {
                     href="https://medium.com/@noahdavemunene"
                     target="_blank"
                     rel="noreferrer"
-                    className="block px-4 py-2 hover:bg-gray-700 rounded"
+                    className="block px-4 py-2   rounded hover:text-purple-400 transition-colors"
                   >
                     Medium
                   </a>
@@ -84,6 +87,7 @@ export const Navbar = ({ setMenuOpen }) => {
             <a
               href="https://github.com/DavisNoah02"
               target="_blank"
+              
               rel="noopener noreferrer"
             >
               <button className="btn-github">

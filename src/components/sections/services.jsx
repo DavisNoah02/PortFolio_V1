@@ -31,7 +31,7 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="flex items-center justify-center py-6 bg-gradient-custom min-h-screen"
+      className="flex items-center justify-center  bg-gradient-custom min-h-screen"
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-5">

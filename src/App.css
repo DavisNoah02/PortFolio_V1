@@ -221,6 +221,12 @@
 #education .rounded-lg {
   border-radius: 0.5rem;
 }
+.bg-gradient-custom {
+  background: linear-gradient(135deg, #1d2e45 0%, #0d0d38 100%);
+}
+.bg-gradient-custom2 {
+  background: linear-gradient(135deg, #13192c 0%, #091f41 100%);
+}
 
 /* Profile img */
 :root {

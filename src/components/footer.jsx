@@ -33,12 +33,12 @@ export const Footer = () => {
     <>
       <hr className="border-t border-gray-400 w-3/4 mx-auto mb-3" />
   
-      <footer className="bg-gradient-custom text-white py-6 text-center space-y-4">
+      <footer className="bg-gradient-custom2 text-white py-6 text-center space-y-4">
         <h1 className="text-2xl font-bold text-blue-600">Noah Dave Munene</h1>
   
         {/* Responsive Nav Links */}
         <nav className="flex flex-wrap justify-center gap-8 text-lg font-medium text-gray-400">
-          {["About", "Skills", "Projects", "Education","Certificates", "Contact"].map((item) => (
+          {["About", "Skills", "Projects", "Education","Certifications", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

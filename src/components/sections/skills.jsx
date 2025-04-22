@@ -95,14 +95,14 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen flex items-center justify-center pt-24 pb-6  bg-gradient-custom"
+      className="min-h-screen flex items-center justify-center pt-14 pb-2  bg-gradient-custom"
     >
       <RevealOnScroll direction="up">
-        <div className="max-w-3xl mx-auto px-4 glass p-6 rounded-xl border bg-gray-900 border-blue-500/40 
+        <div className="max-w-4xl mx-auto px-4 glass p-6 rounded-xl border bg-gray-900 border-blue-500/10 
                  hover:-translate-y-2 hover:border-white-500/60 
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all ">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+          <h2 className="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             MY SKILLS SET
           </h2>
 

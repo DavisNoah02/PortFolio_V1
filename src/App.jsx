@@ -12,6 +12,7 @@ import { About } from "./components/sections/about";
 import { Socials } from "./components/socials";
 import { Services } from "./components/sections/services";
 import { Projects } from "./components/sections/projects";
+import { Certifications } from "./components/sections/certifications";
 import "./index.css";
 import { Contact } from "./components/sections/contact";
 import { Footer } from "./components/footer";
@@ -38,6 +39,7 @@ function App() {
           <Skills/>
           <Services/>
           <Projects />
+          <Certifications />
           <Education/>
           <Contact />
           <WhatsAppButton />
