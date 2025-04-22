@@ -17,12 +17,12 @@ export const About = () => {
   return (
     <section
       id="about"
-     className="min-h-screen flex flex-col md:flex-row items-center justify-end relative  pt-20 bg-gradient-custom2"
+     className="min-h-screen flex flex-col md:flex-row items-center justify-end relative  pt-10 bg-gradient-custom2"
     > 
-       {/* Profile Image aligned right */}
+       {/* Profile Image  */}
   <div className="md:w-1/2 flex justify-center order-2 md:order-2">
-    <div className="relative max-w-[400px] md:max-w-[400px] w-[70%] ">
-      <div className="wrapper relative w-full rounded-[var(--border-radius)] bg-[var(--green)] shadow-custom transition-transform duration-300 hover:-translate-x-1 hover:-translate-y-1 focus:outline-none">
+    <div className="relative max-w-[300px] md:max-w-[400px] w-[70%] ">
+      <div className="wrapper relative w-full rounded-[var(--border-radius)] bg-[var(--green)] shadow-custom transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 focus:outline-none">
         <img
           className="img relative rounded-[var(--border-radius)] mix-blend-multiply grayscale contrast-100 transition-all duration-300"
           src="/profile1.jpg"

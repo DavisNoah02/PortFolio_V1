@@ -30,7 +30,7 @@ export const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen flex items-center justify-center py-20 text-white bg-gradient-to-br from-[#0a192f] to-[#1e293b]"
+      className="min-h-screen flex items-center justify-center py-10  text-white bg-gradient-to-br from-[#0a192f] to-[#1e293b]"
     >
       <RevealOnScroll>
         <div className="max-w-5xl w-full mx-auto px-2 sm:px-4">
@@ -40,16 +40,12 @@ export const Education = () => {
           <div className="relative">
             {/* Timeline Line with Cap Icons */}
             <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 h-full flex flex-col items-center z-0">
-              <FaGraduationCap className="text-blue-500 text-3xl animate-bounce mb-2" />
-              <div className="border-l-4 border-blue-500 h-full animate-pulse"></div>
-              <FaGraduationCap className="text-blue-500 text-3xl mt-2 animate-bounce" />
+              <FaGraduationCap className="text-blue-500 text-3xl  mb-2" />
+              <div className="border-l-4 border-green-500 h-full animate-pulse"></div>
+              <FaGraduationCap className="text-blue-500 text-3xl mt-2 " />
             </div>
-            {/* Scroll indicator for horizontal scroll on mobile */}
-            <div className="block md:hidden pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 z-20 h-24 w-8 bg-gradient-to-l from-[#0a192f] to-transparent flex items-center justify-center">
-              <svg className="mx-auto animate-pulse" width="24" height="24" fill="none" stroke="#38bdf8" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </div>
+           
+           
             {/* Timeline Content */}
             <div className="relative z-10">
               <div className="flex flex-col gap-8 md:gap-0 md:block overflow-x-auto md:overflow-visible snap-x md:snap-none">
@@ -65,9 +61,9 @@ export const Education = () => {
                       <div className="flex flex-col md:flex-row items-start md:items-center relative group transition-all duration-300">
                         {/* Timeline Dot with gradient and blink animation */}
                         <div
-                          className="absolute w-6 h-6 left-1 md:left-1/2 md:transform md:-translate-x-1/2 z-10 mt-2 md:mt-0 border-4 border-white rounded-full animate-pulse"
+                          className="absolute w-4 h-4 left-1 md:left-1/2 md:transform md:-translate-x-1/2 z-10 mt-2 md:mt-0 border-4 border-white rounded-full "
                           style={{
-                            background: "linear-gradient(135deg, #a855f7 0%, #22d3ee 100%)",
+                            background: "linear-gradient(135deg,rgb(33, 30, 35) 0%, #22d3ee 100%)",
                             boxShadow: "0 0 0 4px rgba(168,85,247,0.3), 0 0 16px 4px #22d3ee66",
                           }}
                         ></div>
@@ -103,7 +99,7 @@ export const Education = () => {
                                 <p>{edu.institution}</p>
                               </div>
                               {!isOpen && (
-                                <p className="text-gray-400 mt-2 line-clamp-4 text-justify">
+                                <p className="text-gray-400 mt-5 line-clamp-4 text-justify">
                                   {halfDesc}
                                 </p>
                               )}

@@ -31,7 +31,7 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className=" flex items-center justify-center py- bg-gradient-custom min-h-screen"
+      className="flex items-center justify-center py-6 bg-gradient-custom min-h-screen"
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-5">
@@ -39,23 +39,25 @@ export const Services = () => {
             Services I Offer
           </h2>
 
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border border-white/10 text-center bg-gray-900 shadow-md shadow-blue-500/50 hover:shadow-lg hover:shadow-blue-500/80 transition-all"
+                className="p-6 rounded-xl border border-white/10 text-center bg-gray-900 shadow-md shadow-blue-500/50 hover:shadow-lg hover:shadow-blue-500/80 transition-all flex flex-col h-full"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-left">{service.description}</p>
-                
-                <a
-                  href={`https://wa.me/+254729239023?text=Hi%20Noah%2C%20I%27m%20interested%20in%20a%20project`}
-                  target="_blank"
-                  className="inline-block px-4 py-2 text-sm font-semibold text-white bg-teal-900 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
-                >
-                  Book Now
-                </a>
+                <p className="text-gray-300 mb-4 text-sm text-justify flex-grow">{service.description}</p>
+                <div className="mt-auto">
+                  <a
+                    href={`https://wa.me/+254729239023?text=Hi%20Noah%2C%20I%27m%20interested%20in%20a%20project`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 text-sm font-semibold text-white bg-teal-900 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                  >
+                    Book Now
+                  </a>
+                </div>
               </div>
             ))}
           </div>

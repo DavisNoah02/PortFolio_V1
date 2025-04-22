@@ -31,7 +31,7 @@ export const Footer = () => {
 
   return (
     <>
-      <hr className="border-t border-gray-600 w-3/4 mx-auto mb-3" />
+      <hr className="border-t border-gray-400 w-3/4 mx-auto mb-3" />
   
       <footer className="bg-gradient-custom text-white py-6 text-center space-y-4">
         <h1 className="text-2xl font-bold text-blue-600">Noah Dave Munene</h1>
@@ -50,7 +50,7 @@ export const Footer = () => {
         </nav>
   
         {/* Greeting with Date */}
-        <p className="text-base text-gray-300">{greeting}, {formattedDate}</p>
+        <p className="text-base text-green-200">{greeting}, {formattedDate}</p>
   
         {/* Copyright */}
         <p className="text-sm text-gray-400">© {currentYear} Noah Dave. All rights reserved.</p>

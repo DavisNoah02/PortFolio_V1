@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {  faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -40,7 +40,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-[90vh] flex items-center justify-center py-12 "
+      className="min-h-[90vh] flex items-center justify-center py-12 pb-32 "
     >
       <RevealOnScroll>
         <div className="flex flex-col md:flex-row w-full max-w-4xl px-4">
@@ -49,22 +49,20 @@ export const Contact = () => {
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
               Let's talk
             </h2>
-            <p className="text-white mb-4">
-              I'm currently available to take on new projects, so feel free to
-              send me a message about anything that you want me to work on. You
-              can contact me anytime.
-            </p>
-            <br />
-            <p className="text-white mb-4 flex items-center">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-6 text-3xl" />
-              m.davenoa@gmail.com
-            </p>
-            <p className="text-white mb-4 flex items-center">
-              <FontAwesomeIcon icon={faPhone} className="mr-6 text-3xl" />
-              +254 729-239-023
-            </p>
-            <p className="text-white flex items-center">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-6 text-3xl" />
+            <p className="text-white mb-4 text-justify">
+                Whether you have an idea for a project or just want to chat, feel free to shoot me an {" "}
+                <a 
+                  href="mailto:your.m.davenoa@gmail.com" 
+                  className="text-gray-400  hover:text-cyan-400 transition-colors duration-300"
+                >
+                email here
+                </a>
+                !
+              </p>
+
+          
+            <p className="text-white flex items-center pt-10">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-6  text-3xl" />
               Nairobi, KENYA
             </p>
           </div>
@@ -121,11 +119,12 @@ export const Contact = () => {
               </div>
 
               <button
-                type="submit"
-                className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,256,0.4)]"
-              >
-                Send Message
-              </button>
+  type="submit"
+  className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium relative overflow-hidden transition-all duration-300 ease-in-out border-2 border-transparent hover:border-cyan-400 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:bg-blue-600"
+>
+  Send Message
+</button>
+
             </form>
           </div>
         </div>

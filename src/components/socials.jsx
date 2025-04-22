@@ -1,7 +1,7 @@
 import { FaGithub, FaInstagram, FaTwitter, FaLinkedin, FaCodepen } from "react-icons/fa";
 
 const socialMedia = [
-  { name: "GitHub", url: "https://github.com/DavisNoah02", icon: <FaGithub /> },
+  { name: "GitHub", url: "https://github.com/DavisNoah02", icon: <FaGithub />,  color: "text-green-500" },
   { name: "Instagram", url: "https://www.instagram.com/t3ch.savvy/", icon: <FaInstagram /> },
   { name: "Linkedin", url: "https://www.linkedin.com/in/noa-dave-36567b356/", icon: <FaLinkedin /> },
   { name: "Codepen", url: "https://codepen.io/Noah-Munene", icon: <FaCodepen /> },
@@ -33,7 +33,11 @@ export const Socials = () => (
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white text-xl sm:text-2xl hover:text-green-400 transition-colors"
+          className={`text-xl sm:text-2xl transition-colors ${
+            item.name === "GitHub"
+              ? "text-green-400" // Always green
+              : "text-white hover:text-green-400"
+          }`}
           aria-label={item.name}
         >
           {item.icon}
