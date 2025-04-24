@@ -20,7 +20,7 @@ const projects = [
     alt: "Dall-e image Generator",
     desc: "An AI Image Generator, a web application that utilizes the DALL-E API to create unique and visually stunning images based on user-provided text descriptions.",
     tech: ["Firebase Auth", "Firebase Storage","React.js", "TailwindCSS", "Flask API", "Vercel", "Dall-e API"],
-    live: "imagify-ai-noa.vercel.app/",
+    live: "https://imagify-ai-noa.vercel.app/",
     code: "https://github.com/DavisNoah02/DALL-E-image-generator-App.git",
     category: "Web",
     comingSoon: false,
