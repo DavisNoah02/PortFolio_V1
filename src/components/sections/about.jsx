@@ -35,7 +35,7 @@ export const About = () => {
 
 
       <RevealOnScroll>
-        <div className="text-center z-10 px-4 py-10 order-1  md:order-2">
+        <div className="text-center z-10 px-4 py-5 order-1  md:order-2">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 bg-clip-text text-transparent">
             Hi, I'm <span >{Bio.name}</span>
         </h1>
