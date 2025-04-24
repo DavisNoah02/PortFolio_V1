@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const projects = [
   {
     title: "Personal Portfolio",
-    img: "/public/images/portfolio.png",
+    img: "/images/portfolio.png",
     alt: "My personal Portfolio",
     desc: "A comprehensive showcase of my skills, expertise, and projects as a web developer. Designed with a focus on responsiveness and user experience, it highlights my ability to create visually appealing and functional web applications.",
     tech: ["Reactjs", "TailwindCSS", "Framer Motion", "Vite", "Emailjs-com", "Chart.js"],
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: "AI Text-to-image Generator",
-    img: "/public/images/ai-imgP.png",
+    img: "/images/ai-imgP.png",
     alt: "Dall-e image Generator",
     desc: "An AI Image Generator, a web application that utilizes the DALL-E API to create unique and visually stunning images based on user-provided text descriptions.",
     tech: ["React.js", "TailwindCSS", "Flask API", "Vercel", "Firebase Auth", "Firebase Storage", "Dall-e API"],
@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: "Elevate Solutions",
-    img: "/public/images/ES.png",
+    img: "/images/ES.png",
     alt: "DigitalMarketting Agency",
     desc: "A modern digital marketing agency site built to highlight services like SEO, branding, and social media strategy. Features include service showcases, client testimonials, and a call-to-action driven design to boost conversions.",
     tech: ["React.js", "TailwindCSS", "vercel", "radix-ui", "Firebase Auth", "Dall-e API"],
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "EDUVERSE LMS",
-    img: "public/images/EDU.png",
+    img: "/images/EDU.png",
     alt: "Learning Mgt System",
     desc: "A Learning Management System (LMS), a platform designed to facilitate online education and training. It allows educators to create, manage, and deliver courses, while enabling learners to access educational content, track progress, and interact with instructors and peers.",
     tech: ["React.js", "Context API", "TailwindCSS", "Axios", "Express.js", "Node.js", "MongoDB", "Cloudinary"],
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     title: "A To-Do List",
-    img: "/public/images/todolist.png",
+    img: "/images/todolist.png",
     alt: "To-Do list Application",
     desc: "A To-Do List application that allows users to create, read, update and delete tasks. Users can also mark tasks as completed and view the completion status.",
     tech: ["HTML5", "CSS3", "Vanilla-JavaScript", "localStorage"],
@@ -59,7 +59,7 @@ const projects = [
   },
   {
     title: "Quote Generator",
-    img: " /public/images/QuoteGen.png",
+    img: " /images/QuoteGen.png",
     alt: "A Quote Generator app",
     desc: "Generate and share inspiring quotes with just a click, featuring customizable styles and themes. This application allows users to explore a wide variety of motivational and thought-provoking quotes.",
     tech: ["Reactjs", "Quotable-api", "css","Js"],
@@ -69,7 +69,7 @@ const projects = [
   },
   {
     title: "Oblak Ops",
-    img: " /public/images/Oblak.png",
+    img: " /images/Oblak.png",
     alt: "Cloud Solutions Platform",
     desc: "Landing page concept for a fictional DevOps and cloud infrastructure company. Showcases services like CI/CD, cloud migrations, and infrastructure monitoring, designed to attract startups and SMEs looking for managed solutions.",
     tech: ["Wix Website Builder"],
@@ -80,7 +80,7 @@ const projects = [
   },
   {
     title: "Canva Portfolio Template",
-    img: "public/images/canvaP.png",
+    img: "/images/canvaP.png",
     alt: "Canva Designs",
     desc: "A downloadable Canva template tailored for creative professionals. Enables easy customization for showcasing portfolios, resumes, or brand guides with a clean, modern aesthetic.",
     tech: ["Canva Tool"],
@@ -91,7 +91,7 @@ const projects = [
   },
   {
     title: "Link-Tree ",
-    img: "/public/images/linkTree.png",
+    img: "/images/linkTree.png",
     alt: "Designs and Graphics",
     desc: "A minimalist personal link-in-bio page inspired by Linktree.A simple page like  for sharing all your online profiles and important links. It keeps everything in one place and looks good on any device.",
     tech: ["LinkTree tool"],
