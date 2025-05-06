@@ -12,8 +12,7 @@
   -webkit-text-fill-color: transparent;
   animation: shine 3s infinite linear;
   animation-fill-mode: forwards;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+
   font-weight: bold;
   font-size: 10px;
   text-decoration: none;
