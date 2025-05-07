@@ -145,7 +145,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
             <button 
               onClick={onClose}
-              className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+              className="absolute top-4 right-4 bg-black/50 hover:bg-white hover:bg-opacity-20 hover:text-cyan-400 rounded-full p-1 transition-all duration-200 scale-100 hover:scale-110 active:scale-95"
             >
               <FiX size={20} />
             </button>
