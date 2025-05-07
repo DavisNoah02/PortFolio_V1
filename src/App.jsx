@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
@@ -23,11 +23,19 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   // const renderParticleJsInHomePage = location.pathname === "/";
 
+  // Scroll to hash on load after loading screen
+  useEffect(() => {
+    if (isLoaded && window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [isLoaded]);
+
   return (
-    
     <div className="min-h-screen  text-gray-100">
-       
-     
       {!isLoaded ? (
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       ) : (
@@ -45,7 +53,6 @@ function App() {
           <WhatsAppButton />
           <Footer/>
           <Socials />
-
         </div>
       )}
     </div>
