@@ -52,7 +52,7 @@ function App() {
   }, [showWelcome]);
 
   return (
-    <div className="min-h-screen text-gray-100 bg-black relative">
+    <div className="min-h-screen text-gray-100  relative">
       {!isLoaded ? (
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       ) : (
