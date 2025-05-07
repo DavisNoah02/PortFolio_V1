@@ -18,11 +18,22 @@ export function ScrollProgress() {
       position: "fixed",
       top: 0,
       left: 0,
-      width: `${scroll}%`,
+      width: "100%",
       height: "4px",
-      background: "linear-gradient(90deg, #00f2fe, #4facfe)",
       zIndex: 100,
-      transition: "width 0.2s"
-    }} />
+      pointerEvents: "none"
+    }}>
+      <div
+        style={{
+          width: `${scroll}%`,
+          height: "50%",
+          borderRadius: "0 8px 8px 0",
+          background: "linear-gradient(90deg, #00f2fe 0%, #4facfe 50%, #43e97b 100%)",
+          boxShadow: "0 2px 8px 0 rgba(79,172,254,0.2)",
+          transition: "width 0.2s cubic-bezier(.4,2,.6,1)",
+          willChange: "width"
+        }}
+      />
+    </div>
   );
 }

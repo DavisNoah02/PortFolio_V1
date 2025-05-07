@@ -16,7 +16,7 @@ import { Certifications } from "./components/sections/certifications";
 import { Contact } from "./components/sections/contact";
 import { Footer } from "./components/footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
-; 
+import { ScrollProgress } from "./components/ScrollProgress"; // <-- Add this line
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -53,6 +53,7 @@ function App() {
 
   return (
     <div className="min-h-screen text-gray-100  relative">
+      <ScrollProgress /> {/* <-- Add this line */}
       {!isLoaded ? (
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       ) : (
