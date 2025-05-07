@@ -1,9 +1,11 @@
-import { FaGithub, FaInstagram, FaTwitter, FaLinkedin, FaCodepen } from "react-icons/fa";
+import { FaGithub, FaInstagram,FaTiktok, FaTwitter , FaLinkedin, FaCodepen } from "react-icons/fa";
 
 const socialMedia = [
   { name: "GitHub", url: "https://github.com/DavisNoah02", icon: <FaGithub />,  color: "text-green-500" },
-  { name: "Instagram", url: "https://www.instagram.com/t3ch.savvy/", icon: <FaInstagram /> },
   { name: "Linkedin", url: "https://www.linkedin.com/in/noa-dave-36567b356/", icon: <FaLinkedin /> },
+  { name: "Instagram", url: "https://www.instagram.com/t3ch.savvy/", icon: <FaInstagram /> },
+  { name: "TikTok", url: "https://www.tiktok.com/@_noa.dave_", icon: <FaTiktok />, color: "text-blue-500" },
+  { name: "X (formerly Twitter)", url: "https://x.com/@Noah02Dave", icon: <FaTwitter />, color: "text-blue-400" },
   { name: "Codepen", url: "https://codepen.io/Noah-Munene", icon: <FaCodepen /> },
 ];
 
@@ -45,6 +47,6 @@ export const Socials = () => (
       ))}
     </div>
     {/* Balloon string (hidden on mobile) */}
-    <div className="w-1 h-16 bg-gradient-to-b from-blue-500 to-transparent sm:block hidden "></div>
+    <div className="w-1 h-29 bg-gradient-to-b from-blue-500 to-transparent sm:block hidden "></div>
   </div>
 );
