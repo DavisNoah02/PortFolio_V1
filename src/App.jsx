@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-import { Spotlight } from "./components/spotlight";
+import { Spotlight } from "./components/Spotlight";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
