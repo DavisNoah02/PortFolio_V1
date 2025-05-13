@@ -42,6 +42,9 @@ export const Certifications = () => (
       <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
        Browse my Achievements
       </h2>
+      <p className="text-gray-300 mb-6 text-center">
+      Certifications and awards that showcase my journey of continuous learning and expertise in the tech field
+            </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {certificates.map((cert, idx) => (
           <div

@@ -265,6 +265,7 @@ export const Projects = () => {
         >
           Featured Projects
         </motion.h2>
+        <p className="text-gray-300 mb-6 text-center"> I've had the opportunity to work on everything from building user-facing web apps and dashboards to ensuring they run smoothly with well-designed cloud infrastructure.</p>
 
         {/* Category Tabs */}
         <div className="flex justify-center mb-10">

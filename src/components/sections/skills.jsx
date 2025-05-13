@@ -110,6 +110,7 @@ export const Skills = () => {
             <p className="text-gray-300 mb-6 text-center">
               Passionate developer with expertise in building scalable web
               applications and creating innovative solutions.
+              Here are some of the skills that I have been working on so far.
             </p>
             {/* Radar Chart */}
             <div className="relative h-96 flex items-center justify-center">
