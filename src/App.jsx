@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
     if (isLoaded) {
       const welcomeTimeout = setTimeout(() => setShowWelcome(true), 500); // 0.5s delay
-      const closeTimeout = setTimeout(() => setShowWelcome(false), 5500); // show for 5s
+      const closeTimeout = setTimeout(() => setShowWelcome(false), 15500); // show for 15s
 
       return () => {
         clearTimeout(welcomeTimeout);
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div className="min-h-screen text-gray-100  relative">
-      <ScrollProgress /> {/* <-- Add this line */}
+      <ScrollProgress /> 
       {!isLoaded ? (
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       ) : (

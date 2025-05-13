@@ -13,7 +13,7 @@ export const Spotlight = () => {
     <div
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-40"
       style={{
-        background: `radial-gradient(300px circle at ${position.x}px ${position.y}px, rgba(255,255,255,0.15), transparent 75%)`,
+        background: `radial-gradient(300px circle at ${position.x}px ${position.y}px, rgba(255,255,255,0.15), transparent 45%)`,
         transition: "background 0.08s ease-out",
         mixBlendMode: "screen", // Optional: makes it glow more naturally
       }}

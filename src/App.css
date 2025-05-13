@@ -5,7 +5,7 @@
   margin-left: 0;
   padding: 12px 48px;
   color: #fff;
-  background: linear-gradient(to right, #2506f0 0, #70cef3 10%, #193fe6 20%);
+  background: linear-gradient(to right, #5d14d3 0, #70cef3 10%, #193fe6 20%);
   background-position: 0;
   -webkit-background-clip: text;
   background-clip: text;
@@ -19,6 +19,7 @@
   white-space: nowrap;
   font-family: "Poppins", sans-serif;
 }
+
 
 @-moz-keyframes shine {
   0% {
@@ -95,7 +96,7 @@
     inset 0 0 0 1px rgba(3, 91, 46, 0.08);
   color: #00ff48;
   transform: translate(0, -0.25rem);
-  background-color: rgba(6, 141, 141, 0.5);
+  background-color: rgba(16, 158, 158, 0.5);
 }
 
 /* RESUME btn*/
@@ -170,7 +171,7 @@
   }
   
   .nav-link:hover {
-    color: #5966f7;
+    color: #23ae48;
   }
 
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FiExternalLink, FiGithub, FiX, FiClock } from "react-icons/fi";
+import { FiExternalLink, FiGithub, FiX, FiClock, FiZoomIn } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Project data with categories
@@ -261,7 +261,7 @@ export const Projects = () => {
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent text-center"
+          className="text-3xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent text-center"
         >
           Featured Projects
         </motion.h2>
@@ -299,7 +299,7 @@ export const Projects = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, delay: idx * 0.05 }}
-                className="bg-gray-800/70 border border-gray-700/50 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-900/20 transition-all duration-300 hover:translate-y-[-5px] cursor-pointer"
+                className="relative bg-gray-800/70 border border-gray-700/50 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-900/20 transition-all duration-300 hover:translate-y-[-5px] cursor-pointer group"
                 onClick={() => openModal(project)}
               >
                 {/* Project Image */}
@@ -329,6 +329,13 @@ export const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <h3 className="text-lg font-bold text-white">{project.title}</h3>
+                  </div>
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                    <span className="flex flex-col items-center gap-2">
+                      <FiZoomIn className="text-green-400 text-3xl mb-1" />
+                      <span className="text-green-400 text-base font-semibold">Click to view </span>
+                    </span>
                   </div>
                 </div>
 

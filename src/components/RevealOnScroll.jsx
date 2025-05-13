@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export const RevealOnScroll = ({ children, direction = "up", delay = 0 }) => {
+export const RevealOnScroll = ({ children, direction = "down", delay = 0 }) => {
   const ref = useRef(null);
 
   useEffect(() => {

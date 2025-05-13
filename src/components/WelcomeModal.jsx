@@ -21,7 +21,7 @@ export function WelcomeModal({ open, onClose }) {
         <div className="px-6 pt-4 pb-2">
           <p className="text-lg text-cyan-400 font-semibold mb-2">Thank you for visiting my professional space.</p>
           <p className="text-gray-200 mb-3">
-            I'm Noah D. Munene, a passionate Full Stack Developer based in Nairobi. I help businesses and individuals build modern, scalable web solutions.
+            I'm Noah D. Munene, a passionate Full Stack Web Developer based in Nairobi. I help businesses and individuals build modern, scalable web solutions.
           </p>
           <p className="text-gray-300 mb-6">
             Feel free to explore my work and reach out for collaborations, projects, or just to say hi!

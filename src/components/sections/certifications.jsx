@@ -36,6 +36,9 @@ const certificates = [
 export const Certifications = () => (
   <section id="certifications" className="min-h-screen py-5   flex items-center justify-center bg-gradient-custom ">
     <div className="max-w-6xl w-full mx-auto px-4">
+    {/* <h4 className="text-xl  mb-8 bg-gradient-to-r from-green-500 to-cyan-400 bg-clip-text text-transparent text-center">
+       CERTIFICATIONS
+      </h4> */}
       <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
        Browse my Achievements
       </h2>

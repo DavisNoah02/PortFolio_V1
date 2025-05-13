@@ -44,7 +44,7 @@ export const Contact = () => {
       .catch((error) => {
         console.error("EmailJS Error:", error);
         toast.error("Oops! Something went wrong. Please try again.", {
-          position: "bottom-center",
+          position: "bottom-right",
         });
       });
   };
@@ -52,7 +52,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-[90vh] flex items-center justify-center py-12 pb-32 "
+      className="min-h-[90vh] flex items-center justify-center py-18 "
     >
       <RevealOnScroll>
         <div className="flex flex-col md:flex-row w-full max-w-4xl px-4">

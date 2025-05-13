@@ -4,7 +4,7 @@ export const Navbar = ({ setMenuOpen }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full  z-40 bg-[rgba(121, 160, 144, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+    <nav className="fixed top-0 w-full  z-40 bg-[rgba(130, 160, 121, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-6xl mx-auto px-8">
         <div className="flex justify-between items-center h-16">
           <a href="#about" className="btn-shine font-mono text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold">
@@ -45,7 +45,7 @@ export const Navbar = ({ setMenuOpen }) => {
               onMouseLeave={() => setDropdownOpen(false)}
             >
               <div
-                className="selected  text-white px-4 py-1 rounded flex items-center justify-between cursor-pointer hover:text-[#5966f7]"
+                className="selected  text-white px-4 py-1 rounded flex items-center justify-between cursor-pointer hover:text-[#23ae48]"
               >
                 Blogs
                 <svg
