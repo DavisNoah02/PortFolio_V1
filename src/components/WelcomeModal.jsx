@@ -28,7 +28,7 @@ export function WelcomeModal({ open, onClose }) {
           </p>
           <div className="flex justify-end">
             <button
-              className="bg-gradient-to-r from-cyan-700 via-blue-800 to-purple-900 text-white px-6 py-2 rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-700 transition"
+              className="bg-gradient-to-r from-cyan-700 via-blue-800 to-purple-900 text-white px-6 py-2 rounded-lg font-semibold shadow hover:from-blue-800 hover:to-cyan-700 transition hover:cursor-pointer"
               onClick={onClose}
             >
               Explore My Portfolio
