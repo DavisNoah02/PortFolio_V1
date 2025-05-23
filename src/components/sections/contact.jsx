@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -14,9 +14,8 @@ export const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [statusMsg, setStatusMsg] = useState(null);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
-  const formRef = useRef(null);
 
-  // Auto-clear statusMsg after 20 seconds
+  // Auto-clear statusMsg after 30 seconds
   useEffect(() => {
     if (statusMsg) {
       const timer = setTimeout(() => setStatusMsg(null), 20000);
@@ -37,13 +36,12 @@ export const Contact = () => {
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        formRef.current, // Use the ref to get the raw form DOM node
+        e.target,
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
         setStatusMsg({ type: "success", text: "Message sent! I'll get back to you soon." });
         setFormData({ name: "", email: "", message: "" });
-        setRecaptchaToken(null);
       })
       .catch(() => {
         setStatusMsg({ type: "error", text: "Something went wrong. Please try again." });
@@ -121,12 +119,7 @@ export const Contact = () => {
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center md:text-left">
               Get In Touch
             </h2>
-            <form
-              className="space-y-6"
-              onSubmit={handleSubmit}
-              ref={formRef}
-              autoComplete="off"
-            >
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="relative">
                 <input
                   type="text"
@@ -173,10 +166,12 @@ export const Contact = () => {
               </div>
 
               {/* reCAPTCHA */}
-              <ReCAPTCHA
-                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                onChange={setRecaptchaToken}
-              />
+              <div className="relative recaptcha-container">
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={setRecaptchaToken}
+                />
+              </div>
 
               {/* Status Message */}
               {statusMsg && (
