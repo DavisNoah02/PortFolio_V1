@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,43 +11,44 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [statusMsg, setStatusMsg] = useState(null);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const formRef = useRef(null);
+
+  // Auto-clear statusMsg after 20 seconds
+  useEffect(() => {
+    if (statusMsg) {
+      const timer = setTimeout(() => setStatusMsg(null), 20000);
+      return () => clearTimeout(timer);
+    }
+  }, [statusMsg]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!recaptchaToken) {
+      setStatusMsg({ type: "error", text: "Please complete the reCAPTCHA." });
+      return;
+    }
+    setStatusMsg(null);
+    setLoading(true); // Start loading
 
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        e.target,
+        formRef.current, // Use the ref to get the raw form DOM node
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        toast.success(
-          <div>
-            <div className="font-bold text-lg mb-1 text-blue-600">Message Sent</div>
-            <div className="text-blue-800">Thank you for your message. I'll get back to you soon!</div>
-          </div>,
-          {
-            style: {
-              background: "linear-gradient(90deg, #e0e7ff 0%,rgb(213, 219, 245) 80%)",
-              color: "#1e3a8a",
-              border: "1px solid #6366f1",
-              boxShadow: "0 2px 12px 0 rgba(104, 106, 177, 0.15)",
-              opacity: 0.85,
-            },
-            icon: false,
-            closeButton: true,
-          }
-        );
+        setStatusMsg({ type: "success", text: "Message sent! I'll get back to you soon." });
         setFormData({ name: "", email: "", message: "" });
+        setRecaptchaToken(null);
       })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        toast.error("Oops! Something went wrong. Please try again.", {
-          position: "bottom-right",
-        });
-      });
+      .catch(() => {
+        setStatusMsg({ type: "error", text: "Something went wrong. Please try again." });
+      })
+      .finally(() => setLoading(false)); // End loading
   };
 
   return (
@@ -119,7 +121,12 @@ export const Contact = () => {
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center md:text-left">
               Get In Touch
             </h2>
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form
+              className="space-y-6"
+              onSubmit={handleSubmit}
+              ref={formRef}
+              autoComplete="off"
+            >
               <div className="relative">
                 <input
                   type="text"
@@ -165,11 +172,25 @@ export const Contact = () => {
                 />
               </div>
 
+              {/* reCAPTCHA */}
+              <ReCAPTCHA
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                onChange={setRecaptchaToken}
+              />
+
+              {/* Status Message */}
+              {statusMsg && (
+                <div className={`text-center mb-4 ${statusMsg.type === "success" ? "text-green-400" : "text-red-400"}`}>
+                  {statusMsg.text}
+                </div>
+              )}
+
               <button
                 type="submit"
                 className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium relative overflow-hidden transition-all duration-300 ease-in-out border-2 border-transparent hover:border-cyan-400 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:bg-blue-600 hover:cursor-pointer"
+                disabled={loading}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
