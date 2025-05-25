@@ -61,7 +61,6 @@ export const Services = () => {
           <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
             Services I Offer
           </h2>
-          {/* divider/accent */}
           <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -71,19 +70,18 @@ export const Services = () => {
                 className="group p-7 rounded-2xl border border-blue-400/10 bg-white/10 backdrop-blur-md shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col h-full relative overflow-hidden"
               >
                 {/* Glow effect */}
-                <div className="absolute -top-8 -right-8 w-24 h-20 bg-gradient-to-br from-yellow-500 to-purple-500 opacity-20 rounded-full blur-2xl z-0"></div>
-                <div className="relative z-10 flex flex-col items-center flex-1">
+                <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-yellow-500 to-purple-500 opacity-20 rounded-full blur-2xl z-0"></div>
+                <div className="relative z-10 flex flex-col items-center">
                   <div className="text-3xl mb-5 drop-shadow-lg">{service.icon}</div>
-                  <h3 className="text-2xl font-bold ext-gray-300 mb-6 text-center">
+                  <h3 className="text-xl font-bold mb-3 text-white text-center">
                     {service.title}
                   </h3>
-                  <p className=" text-2xl text-gray-300 mb-4 text-sm text-center ">
+                  <p className="text-gray-200 mb-6 text-sm text-center flex-grow">
                     {service.description}
                   </p>
-                  <div className="flex-grow" />
                   <button
                     onClick={() => handleBookClick(service)}
-                    className="mt-2 inline-block px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+                    className="inline-block px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
                   >
                     Book A Call
                   </button>
