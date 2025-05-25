@@ -7,7 +7,7 @@ const socialMedia = [
   { name: "GitHub", url: "https://github.com/DavisNoah02", icon: <FaGithub /> },
   { name: "Linkedin", url: "https://www.linkedin.com/in/noa-dave-36567b356/", icon: <FaLinkedin /> },
   { name: "Instagram", url: "https://www.instagram.com/t3ch.savvy/", icon: <FaInstagram /> },
-  { name: "TikTok", url: "https://www.tiktok.com/@_noa.dave_", icon: <FaTiktok /> },
+  { name: "TikTok", url: "https://www.tiktok.com/@_noah.dave_", icon: <FaTiktok /> },
   { name: "X (formerly Twitter)", url: "https://x.com/@Noah02Dave", icon: <FaTwitter /> },
   { name: "Codepen", url: "https://codepen.io/Noah-Munene", icon: <FaCodepen /> },
 ];

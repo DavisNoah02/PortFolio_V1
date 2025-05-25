@@ -74,12 +74,7 @@ export const Certifications = () => (
           </div>
         ))}
       </div>
-      {/* Mobile horizontal scroll hint */}
-      <div className="sm:hidden mt-6 flex justify-center">
-        <span className="text-xs text-cyan-400 bg-gray-800 px-3 py-1 rounded-full animate-pulse">
-          Scroll horizontally for more &rarr;
-        </span>
-      </div>
+      
     </div>
   </section>
 );
