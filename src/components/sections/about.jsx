@@ -17,7 +17,7 @@ export const About = () => {
   return (
     <section
       id="about"
-     className="min-h-screen flex flex-col md:flex-row items-center justify-end relative  bg-gradient-custom2"
+     className="min-h-screen flex flex-col md:flex-row items-center justify-end relative  bg-gradient-to-br from-gray-900 via-blue-950 to-purple-900 overflow-hidden"
     > 
        {/* Profile Image  */}
   <div className="md:w-1/2 flex justify-center order-2 md:order-2">
