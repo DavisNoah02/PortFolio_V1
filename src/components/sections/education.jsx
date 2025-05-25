@@ -37,6 +37,8 @@ export const Education = () => {
           <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
             Education
           </h2>
+          {/* divider/accent */}
+           <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
           <div className="relative">
             {/* Timeline Line with Cap Icons */}
             <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 h-full flex flex-col items-center z-0">

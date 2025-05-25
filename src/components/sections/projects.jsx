@@ -265,6 +265,8 @@ export const Projects = () => {
         >
           Featured Projects
         </motion.h2>
+        {/* divider/accent+ */}
+         <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
         <p className="text-gray-300 mb-6 text-center"> I've had the opportunity to work on everything from building user-facing web apps and dashboards to ensuring they run smoothly with well-designed cloud infrastructure.</p>
 
         {/* Category Tabs */}
@@ -276,7 +278,7 @@ export const Projects = () => {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-2 rounded-md font-medium transition-all duration-300 ${
                   activeCategory === category.id
-                    ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg"
+                    ? "text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-md hover:scale-105 hover:shadow-lg "
                     : "text-gray-400 hover:text-gray-200"
                 }`}
               >
