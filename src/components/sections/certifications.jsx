@@ -39,7 +39,7 @@ export const Certifications = () => (
     {/* <h4 className="text-xl  mb-8 bg-gradient-to-r from-green-500 to-cyan-400 bg-clip-text text-transparent text-center">
        CERTIFICATIONS
       </h4> */}
-      <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+      <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
        Browse my Achievements
       </h2>
       <p className="text-gray-300 mb-6 text-center">

@@ -102,7 +102,7 @@ export const Skills = () => {
                  hover:-translate-y-2 hover:border-white-500/60 
                  hover:shadow-[0_4px_20px_rgba(128,0,128,0.3)]
                  transition-all ">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+          <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
             My Skills Set
           </h2>
 
