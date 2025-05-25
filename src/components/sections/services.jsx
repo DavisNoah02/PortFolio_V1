@@ -73,7 +73,7 @@ export const Services = () => {
                 <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-yellow-500 to-purple-500 opacity-20 rounded-full blur-2xl z-0"></div>
                 <div className="relative z-10 flex flex-col items-center">
                   <div className="text-3xl mb-5 drop-shadow-lg">{service.icon}</div>
-                  <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  <h3 className="text-xl font-bold mb-3 text-white text-center">
                     {service.title}
                   </h3>
                   <p className="text-gray-200 mb-6 text-sm text-center flex-grow">

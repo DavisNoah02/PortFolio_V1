@@ -42,6 +42,9 @@ export const Certifications = () => (
       <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
        Browse my Achievements
       </h2>
+      {/* divider/accent */}
+       <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
+       
       <p className="text-gray-300 mb-6 text-center">
       Certifications and awards that showcase my journey of continuous learning and expertise in the tech field
             </p>

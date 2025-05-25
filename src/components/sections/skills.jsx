@@ -105,8 +105,9 @@ export const Skills = () => {
           <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
             My Skills Set
           </h2>
-
-          <div >
+          {/* divider/accent */}
+          <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
+          <div>
             <p className="text-gray-300 mb-6 text-center">
               Passionate developer with expertise in building scalable web
               applications and creating innovative solutions.
