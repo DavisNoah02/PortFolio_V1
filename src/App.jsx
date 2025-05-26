@@ -1,3 +1,5 @@
+
+import { Analytics } from "@vercel/analytics/react"
 import { useState, useEffect } from "react";
 import "./App.css";
 
@@ -69,6 +71,7 @@ function App() {
                 : "opacity-100"
             }`}
           >
+            <Analytics />
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <About />
