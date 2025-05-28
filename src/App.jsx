@@ -1,6 +1,6 @@
 
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { useState, useEffect } from "react";
 import "./App.css";
 
@@ -73,6 +73,7 @@ function App() {
             }`}
           >
             <Analytics />
+            <SpeedInsights/>
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <About />
