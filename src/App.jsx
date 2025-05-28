@@ -1,6 +1,7 @@
 
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
+// Main App component
 import { useState, useEffect } from "react";
 import "./App.css";
 
@@ -19,7 +20,7 @@ import { Certifications } from "./components/sections/certifications";
 import { Contact } from "./components/sections/contact";
 import { Footer } from "./components/footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
-import { ScrollProgress } from "./components/ScrollProgress"; // <-- Add this line
+import { ScrollProgress } from "./components/ScrollProgress"; 
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);

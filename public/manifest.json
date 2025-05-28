@@ -1,6 +1,6 @@
 {
-  "name": "Portfolio",
-  "short_name": "Portfolio",
+  "name": "Noah Portfolio",
+  "short_name": "Noah Portfolio",
   "description": "A personal portfolio showcasing projects, skills, and more.",
   "start_url": "/",
   "display": "standalone",

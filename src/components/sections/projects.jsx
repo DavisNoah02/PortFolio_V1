@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "EDUVERSE LMS",
-    img: "/images/EDU.png",
+    img: "",
     alt: "Learning Mgt System",
     desc: "A Learning Management System (LMS), a platform designed to facilitate online education and training. It allows educators to create, manage, and deliver courses, while enabling learners to access educational content, track progress, and interact with instructors and peers.",
     tech: [ "Express.js", "Node.js", "MongoDB", "Cloudinary","React.js", "Context API", "TailwindCSS", "Axios"],
@@ -307,11 +307,13 @@ export const Projects = () => {
               >
                 {/* Project Image */}
                 <div className="relative">
-                  <img
-                    src={project.img}
-                    alt={project.alt}
-                    className="w-full h-48 object-cover"
-                  />
+                  {project.img && (
+                    <img
+                      src={project.img}
+                      alt={project.alt}
+                      className="w-full h-48 object-cover"
+                    />
+                  )}
                   {project.title === "EDUVERSE LMS" ? (
                     <div className="absolute top-3 right-3">
                       <span className="flex items-center bg-green-900/70 text-green-300 py-1 px-3 rounded-full text-xs font-medium">

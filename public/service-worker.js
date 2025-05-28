@@ -1,4 +1,4 @@
-const CACHE_NAME = "portfolio-cache-v1";
+const CACHE_NAME = "noah-portfolio-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
@@ -15,6 +15,13 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  const url = event.request.url;
+
+  // Skip caching for Vercel analytics and speed insights scripts
+  if (url.includes("_vercel/insights") || url.includes("_vercel/speed-insights")) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request);
