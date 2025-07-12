@@ -12,7 +12,7 @@ export const About = () => {
       "SEO Specialist",
       "Web Developer",	
     ],
-    description: "I'm an enthusiastic and adaptable web developer based in Nairobi, KENYA, with two years of experience building responsive and scalable web applications using modern technologies. Driven by a passion for creating impactful solutions, I thrive on learning and tackling new challenges.  I'm committed to leveraging technology to make a real difference."
+    description: " Noah is an enthusiastic, skilled and passionate Full-Stack web developer and consultant based in Kenya, specializing in crafting impactful digital solutions as well as with a keen eye for detail and a love for problem-solving. With hands-on experience in building web applications using Javascript ,React.js & Next.js with TypeScript, TailwindCSS, and Prisma, I'm comfortable working in collaborative environments and value open communication and feedback."
   };
   return (
     <section

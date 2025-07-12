@@ -41,7 +41,7 @@ export const WhatsAppButton = () => {
         href={whatsappURL}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-800 text-white p-3 rounded-full shadow-lg hover:bg-green-900 transition-all"
+        className="bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all"
         initial={{ scale: 0 }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{
