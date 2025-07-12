@@ -30,7 +30,7 @@ function App() {
   // Show welcome modal after loading
   useEffect(() => {
     if (isLoaded) {
-      const welcomeTimeout = setTimeout(() => setShowWelcome(true), 500); // 0.5s delay
+      const welcomeTimeout = setTimeout(() => setShowWelcome(true), 1000); // 1s delay
       const closeTimeout = setTimeout(() => setShowWelcome(false), 15500); // show for 15s
 
       return () => {
