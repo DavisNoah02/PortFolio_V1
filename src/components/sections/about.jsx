@@ -12,7 +12,7 @@ export const About = () => {
       "SEO Specialist",
       "Web Developer",	
     ],
-    description: " Noah is an enthusiastic, skilled and passionate Full-Stack web developer and consultant based in Kenya, specializing in crafting impactful digital solutions as well as with a keen eye for detail and a love for problem-solving. With hands-on experience in building web applications using Javascript ,React.js & Next.js with TypeScript, TailwindCSS, and Prisma, I'm comfortable working in collaborative environments and value open communication and feedback."
+    description: " Noah is an enthusiastic, skilled and passionate Full-Stack web developer and consultant based in Kenya, specializing in crafting impactful digital solutions as well as with a keen eye for detail and a love for problem-solving. With hands-on experience in building web applications using Javascript ,React.js & Next.js with TypeScript, TailwindCSS, and Prisma, I'm comfortable working in collaborative environments and value open communication and feedback.",
   };
   return (
     <section
