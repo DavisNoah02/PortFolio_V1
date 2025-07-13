@@ -35,7 +35,7 @@ export const WhatsAppButton = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {hovered ? "Message Noah now" : "WhatsApp"}
+        {hovered ?  "WhatsApp" : "Message Noah now"}
       </motion.div>
       <motion.a
         href={whatsappURL}

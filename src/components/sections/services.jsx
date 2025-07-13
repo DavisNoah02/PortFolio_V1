@@ -32,6 +32,7 @@ export const Services = () => {
       description: "Rank higher on Google with technical & content-based SEO strategies.",
       icon: "🔍",
     },
+    
   ];
 
   const handleBookClick = () => {
@@ -66,10 +67,16 @@ export const Services = () => {
     };
   }, [showCalOverlay]);
 
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleToggle = (idx) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
+
   return (
     <section
       id="services"
-      className="relative flex flex-col items-center justify-center min-h-screen py-16 px-5 bg-gradient-custom2 overflow-hidden"
+      className="relative flex flex-col items-center justify-center min-h-screen py-10 px-5 bg-gradient-custom2 overflow-hidden"
     >
       {/* Decorative Blurred Shapes */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 opacity-20 rounded-full blur-3xl -z-10" />
@@ -78,44 +85,66 @@ export const Services = () => {
       {/* Spinner Overlay */}
       {isLoading && <Spinner message="Opening calendar..." />}
 
-      {/* Services Section */}
       <RevealOnScroll>
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight drop-shadow-lg">
-            Services I Offer
-          </h2>
-          <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
+  <section className="max-w-6xl mx-auto px-4 py-20 text-center">
+    {/* Header */}
+    <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight drop-shadow-sm">
+      Services I Offer
+    </h2>
+    <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-md" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group p-6 rounded-2xl border border-blue-400/10 bg-white/10 backdrop-blur-md shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col h-full relative overflow-hidden"
-              >
-                <div className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-yellow-500 to-purple-500 opacity-20 rounded-full blur-2xl z-0"></div>
-                <div className="relative z-10 flex flex-col items-center">
-                  <div className="text-3xl mb-4 drop-shadow-lg">{service.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2 text-white text-center">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-200 text-sm text-center">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Button */}
+    {/* Services List */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      {services.map((service, idx) => (
+        <div
+          key={idx}
+          className="rounded-xl border border-white/10 bg-gradient-to-tr from-white/5 to-white/10 backdrop-blur-md shadow-md hover:shadow-xl hover:border-blue-400/20 transition-all duration-300"
+        >
+          {/* Toggle Header */}
           <button
-            onClick={handleBookClick}
-            className="inline-flex items-center gap-2 px-4 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
+            className="flex items-center justify-between w-full px-6 py-5 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-t-xl"
+            onClick={() => handleToggle(idx)}
+            aria-expanded={openIndex === idx}
+            aria-controls={`service-panel-${idx}`}
           >
-            <span role="img" aria-label="calendar">📅</span>
-            Book My Cal
+            <div className="flex items-center gap-4">
+              <span className="text-3xl text-blue-400 group-hover:scale-110 transition-transform">{service.icon}</span>
+              <span className="text-lg sm:text-xl font-semibold text-white">{service.title}</span>
+            </div>
+            <span
+              className={`text-white transform transition-transform duration-300 ${
+                openIndex === idx ? 'rotate-90' : ''
+              }`}
+            >
+              ▶
+            </span>
           </button>
+
+          {/* Collapsible Description */}
+          <div
+            id={`service-panel-${idx}`}
+            className={`px-6 pb-5 text-gray-300 text-sm leading-relaxed transition-all duration-300 ease-in-out overflow-hidden ${
+              openIndex === idx ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+            style={{ transitionProperty: 'max-height, opacity' }}
+          >
+            {service.description}
+          </div>
         </div>
-      </RevealOnScroll>
+      ))}
+    </div>
+
+    {/* CTA Button */}
+    <button
+      onClick={handleBookClick}
+      className="mt-16 inline-flex items-center gap-2 px-6 py-3 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-blue-700 to-slate-700 hover:from-blue-600 hover:to-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+    >
+      <span role="img" aria-label="calendar">📅</span>
+      Book My Cal
+    </button>
+  </section>
+</RevealOnScroll>
+
 
       {/* Calendar Overlay */}
       {showCalOverlay && (

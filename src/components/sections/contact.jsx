@@ -59,7 +59,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-[90vh] flex items-center justify-center py-18 ">
+    <section id="contact" className="min-h-[90vh] flex items-center justify-center py-28 ">
       <RevealOnScroll>
         <div className="flex flex-col md:flex-row w-full max-w-4xl px-4">
           {/* Left Side: Info */}
@@ -167,7 +167,7 @@ export const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border border-cyan-400 bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] disabled:opacity-60"
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border border-cyan-400 bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:cursor-pointer hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] disabled:opacity-60"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   {loading ? "Sending..." : "Send Message"}

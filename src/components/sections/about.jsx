@@ -17,7 +17,7 @@ export const About = () => {
   return (
     <section
       id="about"
-     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative bg-gradient-custom  overflow-hidden"
+     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative   overflow-hidden"
     > 
     
        {/* Profile Image  */}
@@ -38,17 +38,16 @@ export const About = () => {
       <RevealOnScroll>
       <div className="text-center  z-10 px-4 py-5 order-1 md:order-2 md:items-start">
 
-        
-
+        <h2 className="text-4xl p-4 font-bold ">About <span className=" bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">Me </span></h2>
           {/* Typewriter Effect */}
-          <div className="mt-4 text-xl sm:text-2xl font-semibold">
+          <div className="mt-4 text-xl text-justify sm:text-2xl font-semibold">
             <span>A </span>
             <span className="text-blue-400">
               <Typewriter
                 words={Bio.roles}
                 loop={true}
                 cursor
-                cursorStyle="_"
+                cursorStyle="|"
                 typeSpeed={70}
                 deleteSpeed={50}
               />
@@ -62,11 +61,11 @@ export const About = () => {
 
           <div className="flex justify-start space-x-8">
           <a
-  href="https://docs.google.com/document/d/1g9Jg6m9U9FqEujTOjPG6xzKaenJ5mJ8SaVFmxm29EwA/edit?usp=sharing"
-  target="_blank"
-  className="relative group inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-custom-dark cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
-  rel="noopener noreferrer"
->
+            href="https://docs.google.com/document/d/1g9Jg6m9U9FqEujTOjPG6xzKaenJ5mJ8SaVFmxm29EwA/edit?usp=sharing"
+            target="_blank"
+            className="relative group inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-custom-dark cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+            rel="noopener noreferrer"
+          >
   <button className="button shadow-custom-dark ml-auto" type="button">
     <span className="button__text">RESUME</span>
     <span className="button__icon">

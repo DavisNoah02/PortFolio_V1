@@ -6,7 +6,7 @@ export const LoadingScreen = ({ onComplete }) => {
 
   useEffect(() => {
     const entryTime = 1200; // Time to play entry animation
-    const exitTime = 600;   // Time to play exit animation
+    const exitTime = 400;   // Time to play exit animation
 
     const entryTimer = setTimeout(() => {
       setFadeOut(true); // Trigger exit animation

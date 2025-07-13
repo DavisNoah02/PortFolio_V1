@@ -171,8 +171,10 @@
   }
   
   .nav-link:hover {
-    color: #4b6cf0;
+    color: #03c8ff;
+    text-shadow: 0 0 5px rgba(75, 108, 240, 0.5);
     text-shadow: 0 0 5px rgba(11, 50, 205, 0.5);
+    text-decoration: underline
   }
 
 

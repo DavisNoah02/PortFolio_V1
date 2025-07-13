@@ -111,59 +111,31 @@ function App() {
           )}
 
           {/* Cookie Consent (delayed 20s) */}
-          {showCookie && (
-            <div
-              className="fixed right-4 bottom-8 z-50 "
-              style={{ width: 'fit-content', maxWidth: 500 }}
-            >
+         {showCookie && (
+            <div className="fixed right-4 bottom-18 z-50 max-w-[500px] w-fit">
               <div
-                style={{
-                  background: 'rgba(250, 250, 250, 0.65)',
-                  color: '#6b3a00',
-                  border: '2px solid #2196f3',
-                  borderRadius: '18px',
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                  backdropFilter: 'blur(10px)',
-                 
-                  padding: '1rem 1rem 1rem 1rem',
-                  position: 'relative',
-                  minWidth: 240,
-                  maxWidth: 500,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.5rem',
-                  
-                }}
-                className="cookie-box"
+                className="relative flex flex-col gap-2 min-w-[240px] max-w-[500px] p-4 rounded-[18px] border-2 border-blue-500 bg-white/70 text-[#6b3a00] shadow-lg backdrop-blur hover:bg-white/90 transition-all duration-300 cursor-pointer"
               >
                 {/* Close button */}
                 <button
                   onClick={() => setShowCookie(false)}
-                  style={{
-                    position: 'absolute',
-                    top: 12,
-                    right: 16,
-                    background: 'none',
-                    border: 'none',
-                    fontSize: 22,
-                    color: '#6b3a00',
-                    cursor: 'pointer',
-                    fontWeight: 700,
-                  }}
+                  className="absolute top-3 right-4 text-2xl font-bold text-[#6b3a00] hover:text-red-700 focus:outline-none"
                   aria-label="Close cookie consent"
                 >
                   ×
                 </button>
-                <div style={{ fontWeight: 700, fontSize: '1rem', marginBottom: 1, color: '#6b3a00', textAlign: 'center' }}>
+
+                <div className="font-bold text-base text-center">
                   I started my own Web Development Agency!
                 </div>
-                <div style={{ fontSize: '0.8rem', color: '#6b3a00', marginBottom: 1 , textAlign: 'left' }}>
+
+                <div className="text-sm text-left">
                   If you're looking for an affordable, stunning website tailored to your needs,{' '}
                   <a
                     href="https://noa-dave.vercel.app"
                     target="_blank"
                     rel="noreferrer"
-                    style={{ color: 'blue',  textDecoration: 'underline', fontWeight: 500 }}
+                    className="text-blue-600 underline font-medium hover:text-blue-800"
                   >
                     visit my agency
                   </a>{' '}
@@ -172,6 +144,9 @@ function App() {
               </div>
             </div>
           )}
+
+
+
         </>
       )}
     </div>

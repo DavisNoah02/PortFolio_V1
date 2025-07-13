@@ -47,59 +47,59 @@ const projects = [
     category: "Web",
     comingSoon: true,
   },
-  {
-    title: "A To-Do List",
-    img: "/images/todolist.png",
-    alt: "To-Do list Application",
-    desc: "A To-Do List application that allows users to create, read, update and delete tasks. Users can also mark tasks as completed and view the completion status.",
-    tech: ["HTML5", "CSS3", "Vanilla-JavaScript", "localStorage"],
-    live: "https://noa-to-do-app.netlify.app/",
-    code: "https://github.com/DavisNoah02/To-Do-List_Web-App",
-    category: "Others",
-  },
-  {
-    title: "Quote Generator",
-    img: " /images/QuoteGen.png",
-    alt: "A Quote Generator app",
-    desc: "Generate and share inspiring quotes with just a click, featuring customizable styles and themes. This application allows users to explore a wide variety of motivational and thought-provoking quotes.",
-    tech: ["Reactjs", "Quotable-api", "css","Js"],
-    live: "https://noa-quote-generator.netlify.app/",
-    code: "https://github.com/DavisNoah02/react-qoute-generator.git",
-    category: "Others",
-  },
-  {
-    title: "Oblak Ops",
-    img: " /images/Oblak.png",
-    alt: "Cloud Solutions Platform",
-    desc: "Landing page concept for a fictional DevOps and cloud infrastructure company. Showcases services like CI/CD, cloud migrations, and infrastructure monitoring, designed to attract startups and SMEs looking for managed solutions.",
-    tech: ["Wix Website Builder"],
-    live: "https://mnoahdave.wixsite.com/oblak-ops/home",
-    code: "",
-    category: "Design",
-    comingSoon: false,
-  },
-  {
-    title: "Canva Portfolio Template",
-    img: "/images/canvaP.png",
-    alt: "Canva Designs",
-    desc: "A downloadable Canva template tailored for creative professionals. Enables easy customization for showcasing portfolios, resumes, or brand guides with a clean, modern aesthetic.",
-    tech: ["Canva Tool"],
-    live: "https://noa-dave.my.canva.site/ai-portfolio",
-    code: "",
-    category: "Design",
-    comingSoon: false,
-  },
-  {
-    title: "Link-Tree ",
-    img: "/images/linkTree.png",
-    alt: "Designs and Graphics",
-    desc: "A minimalist personal link-in-bio page inspired by Linktree.A simple page like  for sharing all your online profiles and important links. It keeps everything in one place and looks good on any device.",
-    tech: ["LinkTree tool"],
-    live: "https://linktr.ee/noah_dave",
-    code: "",
-    category: "Design",
-    comingSoon: false,
-  },
+  // {
+  //   title: "A To-Do List",
+  //   img: "/images/todolist.png",
+  //   alt: "To-Do list Application",
+  //   desc: "A To-Do List application that allows users to create, read, update and delete tasks. Users can also mark tasks as completed and view the completion status.",
+  //   tech: ["HTML5", "CSS3", "Vanilla-JavaScript", "localStorage"],
+  //   live: "https://noa-to-do-app.netlify.app/",
+  //   code: "https://github.com/DavisNoah02/To-Do-List_Web-App",
+  //   category: "Others",
+  // },
+  // {
+  //   title: "Quote Generator",
+  //   img: " /images/QuoteGen.png",
+  //   alt: "A Quote Generator app",
+  //   desc: "Generate and share inspiring quotes with just a click, featuring customizable styles and themes. This application allows users to explore a wide variety of motivational and thought-provoking quotes.",
+  //   tech: ["Reactjs", "Quotable-api", "css","Js"],
+  //   live: "https://noa-quote-generator.netlify.app/",
+  //   code: "https://github.com/DavisNoah02/react-qoute-generator.git",
+  //   category: "Others",
+  // },
+  // {
+  //   title: "Oblak Ops",
+  //   img: " /images/Oblak.png",
+  //   alt: "Cloud Solutions Platform",
+  //   desc: "Landing page concept for a fictional DevOps and cloud infrastructure company. Showcases services like CI/CD, cloud migrations, and infrastructure monitoring, designed to attract startups and SMEs looking for managed solutions.",
+  //   tech: ["Wix Website Builder"],
+  //   live: "https://mnoahdave.wixsite.com/oblak-ops/home",
+  //   code: "",
+  //   category: "Design",
+  //   comingSoon: false,
+  // },
+  // {
+  //   title: "Canva Portfolio Template",
+  //   img: "/images/canvaP.png",
+  //   alt: "Canva Designs",
+  //   desc: "A downloadable Canva template tailored for creative professionals. Enables easy customization for showcasing portfolios, resumes, or brand guides with a clean, modern aesthetic.",
+  //   tech: ["Canva Tool"],
+  //   live: "https://noa-dave.my.canva.site/ai-portfolio",
+  //   code: "",
+  //   category: "Design",
+  //   comingSoon: false,
+  // },
+  // {
+  //   title: "Link-Tree ",
+  //   img: "/images/linkTree.png",
+  //   alt: "Designs and Graphics",
+  //   desc: "A minimalist personal link-in-bio page inspired by Linktree.A simple page like  for sharing all your online profiles and important links. It keeps everything in one place and looks good on any device.",
+  //   tech: ["LinkTree tool"],
+  //   live: "https://linktr.ee/noah_dave",
+  //   code: "",
+  //   category: "Design",
+  //   comingSoon: false,
+  // },
 ];
 
 // Modal component
@@ -121,7 +121,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   return (
     <AnimatePresence>
       <motion.div 
-        className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 pt-24"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -140,7 +140,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             <img 
               src={project.img} 
               alt={project.alt} 
-              className="w-full h-64 object-cover rounded-t-xl"
+              className="w-full h-69 object-cover rounded-t-xl"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
             <button 
@@ -255,7 +255,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-20 w-full bg-gradient-to-br from-gray-900 to-slate-800"
+      className="min-h-screen py-26 w-full bg-gradient-to-br from-gray-900 to-slate-800"
     >
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
@@ -263,11 +263,11 @@ export const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg"
         >
-          Featured Projects
+           Projects I've Worked On
         </motion.h2>
         {/* divider/accent+ */}
          <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
-        <p className="text-gray-300 mb-6 w-1/2 mx-auto text-center"> I've had the opportunity to work on everything from building user-facing web apps and dashboards to ensuring they run smoothly with well-designed cloud infrastructure.</p>
+        <p className="text-gray-300 mb-6 w-1/2 mx-auto text-center"> I've had the opportunity to work on everything from building user-facing web apps and dashboards to ensuring they run smoothly and responisively.</p>
 
         {/* Category Tabs */}
         <div className="flex justify-center mb-10">
