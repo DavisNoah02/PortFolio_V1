@@ -1,26 +1,28 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import CookieConsent from "react-cookie-consent";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import "./App.css";
-import { Hero } from "./components/sections/Hero";
 import { Spotlight } from "./components/Spotlight";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
-import { Skills } from "./components/sections/skills";
-import { Education } from "./components/sections/education";
-import { About } from "./components/sections/about";
 import { WelcomeModal } from "./components/WelcomeModal";
 import { Socials } from "./components/socials";
-import { Services } from "./components/sections/services";
-import { Projects } from "./components/sections/projects";
-import { Certifications } from "./components/sections/certifications";
-import { Contact } from "./components/sections/contact";
 import { Footer } from "./components/footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { Spinner } from "./components/Spinner";
+
+const Hero = lazy(() => import("./components/sections/Hero").then(module => { return { default: module.Hero }; }));
+const About = lazy(() => import("./components/sections/about").then(module => { return { default: module.About }; }));
+const Skills = lazy(() => import("./components/sections/skills").then(module => { return { default: module.Skills }; }));
+const Services = lazy(() => import("./components/sections/services").then(module => { return { default: module.Services }; }));
+const Projects = lazy(() => import("./components/sections/projects").then(module => { return { default: module.Projects }; }));
+const Certifications = lazy(() => import("./components/sections/certifications").then(module => { return { default: module.Certifications }; }));
+const Education = lazy(() => import("./components/sections/education").then(module => { return { default: module.Education }; }));
+const Contact = lazy(() => import("./components/sections/contact").then(module => { return { default: module.Contact }; }));
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -83,14 +85,16 @@ function App() {
             <SpeedInsights />
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Hero />
-            <About />
-            <Skills />
-            <Services />
-            <Projects />
-            <Certifications />
-            <Education />
-            <Contact />
+            <Suspense fallback={<Spinner message="Loading sections..." />}>
+              <Hero />
+              <About />
+              <Skills />
+              <Services />
+              <Projects />
+              <Certifications />
+              <Education />
+              <Contact />
+            </Suspense>
             <WhatsAppButton />
             <Footer />
             <Socials />
