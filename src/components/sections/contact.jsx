@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
-import { ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
+
+import { FiSend } from "react-icons/fi"; 
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,11 +13,11 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
   const [statusMsg, setStatusMsg] = useState(null);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
-  // Auto-clear statusMsg after 30 seconds
   useEffect(() => {
     if (statusMsg) {
       const timer = setTimeout(() => setStatusMsg(null), 20000);
@@ -29,8 +31,9 @@ export const Contact = () => {
       setStatusMsg({ type: "error", text: "Please complete the reCAPTCHA.👇" });
       return;
     }
+
     setStatusMsg(null);
-    setLoading(true); // Start loading
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -40,23 +43,26 @@ export const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        setStatusMsg({ type: "success", text: "Message sent! I'll get back to you soon." });
+        setStatusMsg({
+          type: "success",
+          text: "Message sent! I'll get back to you soon.",
+        });
         setFormData({ name: "", email: "", message: "" });
       })
       .catch(() => {
-        setStatusMsg({ type: "error", text: "Something went wrong. Please try again." });
+        setStatusMsg({
+          type: "error",
+          text: "Something went wrong. Please try again.",
+        });
       })
-      .finally(() => setLoading(false)); // End loading
+      .finally(() => setLoading(false));
   };
 
   return (
-    <section
-      id="contact"
-      className="min-h-[90vh] flex items-center justify-center py-18 "
-    >
+    <section id="contact" className="min-h-[90vh] flex items-center justify-center py-18 ">
       <RevealOnScroll>
         <div className="flex flex-col md:flex-row w-full max-w-4xl px-4">
-          {/* Contact Information */}
+          {/* Left Side: Info */}
           <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
               Let's talk
@@ -75,7 +81,7 @@ export const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg ">Email</h4>
+                  <h4 className="font-semibold text-lg">Email</h4>
                   <p className="text-gray-400">m.davenoa@gmail.com</p>
                   <a href="mailto:m.davenoa@gmail.com" className="text-blue-400 hover:underline hover:text-purple-500">
                     Send an email
@@ -91,7 +97,7 @@ export const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg ">Phone</h4>
+                  <h4 className="font-semibold text-lg">Phone</h4>
                   <p className="text-gray-400">+254729239023</p>
                   <a href="tel:+254729239023" className="text-blue-400 hover:underline hover:text-purple-500">
                     Call me
@@ -107,77 +113,70 @@ export const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg ">Location</h4>
+                  <h4 className="font-semibold text-lg">Location</h4>
                   <p className="text-gray-400">Nairobi, Kenya</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Right Side: Form */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center md:text-left">
               Get In Touch
             </h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
-              <div className="relative">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  value={formData.name}
-                  className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                  placeholder="Name..."
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                />
-              </div>
-
-              <div className="relative">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                  placeholder="Enter your Email"
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                />
-              </div>
-
-              <div className="relative">
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  value={formData.message}
-                  className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                  placeholder="Your Message..."
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                />
-              </div>
-
-                 {/* Status Message */}
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                placeholder="Name..."
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                placeholder="Enter your Email"
+              />
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={5}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                placeholder="Your Message..."
+              />
+              
               {statusMsg && (
                 <div className={`text-center mb-4 ${statusMsg.type === "success" ? "text-green-400" : "text-red-400"}`}>
                   {statusMsg.text}
                 </div>
               )}
+
+              {/* ✅ New: Animated Send Button with Icon */}
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium relative overflow-hidden transition-all duration-300 ease-in-out border-2 border-transparent hover:border-cyan-400 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] hover:bg-blue-600 hover:cursor-pointer"
                 disabled={loading}
+                className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border border-cyan-400 bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] disabled:opacity-60"
               >
-                {loading ? "Sending..." : "Send Message"}
+                <span className="relative z-10 flex items-center gap-2">
+                  {loading ? "Sending..." : "Send Message"}
+                  {!loading && <FiSend className="transform transition-transform duration-200 group-hover:translate-x-1" />
+}
+                </span>
+                <span className="absolute left-0 top-0 h-full w-full transform translate-x-[-100%] bg-white/20 opacity-10 blur-md transition-all duration-700 group-hover:translate-x-full"></span>
               </button>
+
               {/* reCAPTCHA */}
               <div className="relative recaptcha-container">
                 <ReCAPTCHA
@@ -185,8 +184,6 @@ export const Contact = () => {
                   onChange={setRecaptchaToken}
                 />
               </div>
-
-              
             </form>
           </div>
         </div>

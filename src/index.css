@@ -5,10 +5,10 @@ body {
   margin: 0;  
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
-  background: linear-gradient(to left, #301e3a, #1c0d3f);
-  color: white; /* Optional: set text color */
-  font-family: Arial, sans-serif; /* Optional: set a default font */
+  background: rgb(20, 22, 61); /* Default background color */
+  color: white; /* Optional: set a default font */
 }
+
 /* education + footer */
 .bg-gradient-custom {
   background: linear-gradient(to right, #150c2a, #270c52);

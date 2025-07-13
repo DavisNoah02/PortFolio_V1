@@ -1,35 +1,60 @@
 import { useEffect, useState } from "react";
+import "./styles/LoadingScreen.css";
 
 export const LoadingScreen = ({ onComplete }) => {
-  const [text, setText] = useState("");
-  const fullText = "<Hello World />";
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setText(fullText.substring(0, index));
-      index++;
+    const entryTime = 1200; // Time to play entry animation
+    const exitTime = 600;   // Time to play exit animation
 
-      if (index > fullText.length) {
-        clearInterval(interval);
+    const entryTimer = setTimeout(() => {
+      setFadeOut(true); // Trigger exit animation
+    }, entryTime);
 
-        setTimeout(() => {
-          onComplete();
-        }, 1000);
-      }
-    }, 100);
+    const exitTimer = setTimeout(() => {
+      onComplete(); // Unmount
+    }, entryTime + exitTime);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(entryTimer);
+      clearTimeout(exitTimer);
+    };
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 bg-gray-900 text-gray-100 flex flex-col items-center justify-center">
-      <div className="mb-4 text-4xl font-mono font-bold">
-        {text} <span className="animate-blink ml-1"> | </span>
-      </div>
+    <div className={`loading-screen ${fadeOut ? "fade-out" : ""}`}>
+      <div className="hex-container">
+        <svg viewBox="0 0 100 100" className="hex-svg">
+          <defs>
+            <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="mediumspringgreen" />
+              <stop offset="100%" stopColor="lightseagreen" />
+            </linearGradient>
+          </defs>
+          <polygon
+            points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5"
+            fill="none"
+            stroke="url(#neonGradient)"
+            strokeWidth="2"
+            strokeLinejoin="round"
+            strokeDasharray="300"
+            strokeDashoffset="300"
+            className="hexagon-glow"
+          >
+            <animate
+              attributeName="stroke-dashoffset"
+              from="300"
+              to="0"
+              dur="1s"
+              fill="freeze"
+            />
+          </polygon>
+        </svg>
 
-      <div className="w-[200px] h-[2px] bg-gray-800 rounded relative overflow-hidden">
-        <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
+        <div className="letter-overlay">
+          <span className="hex-letter">N</span>
+        </div>
       </div>
     </div>
   );

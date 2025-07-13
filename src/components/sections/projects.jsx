@@ -255,7 +255,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen py-20 bg-gradient-to-br from-gray-900 to-slate-800"
+      className="min-h-screen py-20 w-full bg-gradient-to-br from-gray-900 to-slate-800"
     >
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
@@ -267,7 +267,7 @@ export const Projects = () => {
         </motion.h2>
         {/* divider/accent+ */}
          <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
-        <p className="text-gray-300 mb-6 text-center"> I've had the opportunity to work on everything from building user-facing web apps and dashboards to ensuring they run smoothly with well-designed cloud infrastructure.</p>
+        <p className="text-gray-300 mb-6 w-1/2 mx-auto text-center"> I've had the opportunity to work on everything from building user-facing web apps and dashboards to ensuring they run smoothly with well-designed cloud infrastructure.</p>
 
         {/* Category Tabs */}
         <div className="flex justify-center mb-10">

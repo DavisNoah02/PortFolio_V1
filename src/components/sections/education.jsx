@@ -30,7 +30,7 @@ export const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen flex items-center justify-center py-10  text-white bg-gradient-to-br from-[#0a192f] to-[#1e293b]"
+      className="min-h-screen flex items-center justify-center py-10  text-white bg-gradient-to-br from-blue-950 via-gray-900 to-gray-800 overflow-hidden"
     >
       <RevealOnScroll>
         <div className="max-w-5xl w-full mx-auto px-2 sm:px-4">
@@ -65,7 +65,7 @@ export const Education = () => {
                         <div
                           className="absolute w-4 h-4 left-1 md:left-1/2 md:transform md:-translate-x-1/2 z-10 mt-2 md:mt-0 border-4 border-white rounded-full "
                           style={{
-                            background: "linear-gradient(135deg,rgb(33, 30, 35) 0%, #22d3ee 100%)",
+                            
                             boxShadow: "0 0 0 4px rgba(168,85,247,0.3), 0 0 16px 4px #22d3ee66",
                           }}
                         ></div>

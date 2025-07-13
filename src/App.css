@@ -5,7 +5,7 @@
   margin-left: 0;
   padding: 12px 48px;
   color: #fff;
-  background: linear-gradient(to right, #5d14d3 0, #70cef3 10%, #193fe6 20%);
+  background: linear-gradient(to right, #766099 0, #e0fdda 10%, #1994e6 20%);
   background-position: 0;
   -webkit-background-clip: text;
   background-clip: text;
@@ -171,7 +171,8 @@
   }
   
   .nav-link:hover {
-    color: #23ae48;
+    color: #4b6cf0;
+    text-shadow: 0 0 5px rgba(11, 50, 205, 0.5);
   }
 
 

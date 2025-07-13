@@ -17,8 +17,9 @@ export const About = () => {
   return (
     <section
       id="about"
-     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative  bg-gradient-to-br from-gray-900 via-blue-950 to-purple-900 overflow-hidden"
+     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative bg-gradient-custom  overflow-hidden"
     > 
+    
        {/* Profile Image  */}
   <div className="md:w-1/2 flex justify-center order-2 md:order-2">
     <div className="relative max-w-[300px] md:max-w-[400px] w-[70%] ">
@@ -37,9 +38,7 @@ export const About = () => {
       <RevealOnScroll>
       <div className="text-center  z-10 px-4 py-5 order-1 md:order-2 md:items-start">
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-            Hi, I'm <span >{Bio.name}</span>
-        </h1>
+        
 
           {/* Typewriter Effect */}
           <div className="mt-4 text-xl sm:text-2xl font-semibold">
