@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 # Noah Davi - Personal Portfolio
+=======
+# Noah Dave - Personal Portfolio v1.0
+>>>>>>> a807608afd08c3430345d61651b4bb0ae00c8fae
 
 A modern, responsive personal portfolio website built with React and Vite, showcasing my skills, projects, and professional experience as a web developer.
 
-![Portfolio Preview](public/images/portfolio.png)
+<img width="1783" height="950" alt="image" src="https://github.com/user-attachments/assets/c4b2d979-0786-42d0-88a6-56d4064ff1fe" />
+
 
 ## 🌟 Features
 
@@ -262,14 +267,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Portfolio**: [https://noa-dave.vercel.app/](https://noa-dave.vercel.app/)
 - **GitHub**: [@DavisNoah02](https://github.com/DavisNoah02)
-- **Email**: [Your Email]
-
-## 🙏 Acknowledgments
-
-- Icons from [React Icons](https://react-icons.github.io/react-icons/)
-- Animations powered by [Framer Motion](https://www.framer.com/motion/)
-- Styling with [TailwindCSS](https://tailwindcss.com/)
-- Build tool [Vite](https://vitejs.dev/)
+- **Email**: [m.davenoa@gmail.com]
 
 ---
 
