@@ -155,9 +155,7 @@ export const Skills = () => {
       </RevealOnScroll>
     </section>
   );
-};
-
-const SkillCategory = ({ title, skills, color }) => (
+};const SkillCategory = ({ title, skills, color }) => (
   <div className="p-4 rounded-lg bg-gray-800/50 backdrop-blur-sm">
     <h3 className={`text-lg font-semibold mb-2 bg-gradient-to-r ${color} bg-clip-text text-transparent`}>
       {title}
@@ -174,3 +172,4 @@ const SkillCategory = ({ title, skills, color }) => (
     </div>
   </div>
 );
+

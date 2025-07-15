@@ -17,7 +17,7 @@ export const About = () => {
   return (
     <section
       id="about"
-     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative   overflow-hidden"
+     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative   overflow-hidden bg-gradient-custom2"
     > 
     
        {/* Profile Image  */}
@@ -36,9 +36,10 @@ export const About = () => {
 
 
       <RevealOnScroll>
-      <div className="text-center  z-10 px-4 py-5 order-1 md:order-2 md:items-start">
+      <div className="text-center  z-10 px-4 pt-18 py-5 order-1 md:order-2 md:items-start">
 
         <h2 className="text-4xl p-4 font-bold ">About <span className=" bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">Me </span></h2>
+        <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
           {/* Typewriter Effect */}
           <div className="mt-4 text-xl text-justify sm:text-2xl font-semibold">
             <span>A </span>

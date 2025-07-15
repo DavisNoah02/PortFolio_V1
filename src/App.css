@@ -1,6 +1,6 @@
 
 /* noa dave <a> tag */
-.btn-shine {
+/* .btn-shine {
   position: relative; 
   margin-left: 0;
   padding: 12px 48px;
@@ -18,8 +18,23 @@
   text-decoration: none;
   white-space: nowrap;
   font-family: "Poppins", sans-serif;
-}
+} */
 
+.btn-shine { 
+position: relative; 
+  margin-left: 0;
+  padding:  18px;
+  color: #fff;
+  background: linear-gradient(to right, #b0e8af 0, #b8b8b8 10%, #92c8ec 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
 
 @-moz-keyframes shine {
   0% {

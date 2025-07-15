@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import CookieConsent from "react-cookie-consent";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { useRef } from "react";
 
 import "./App.css";
 import { Spotlight } from "./components/Spotlight";
@@ -63,6 +64,55 @@ function App() {
     }
   }, [isLoaded]);
 
+  const sectionIds = [
+    "hero",
+    "about",
+    "skills",
+    "services",
+    "projects",
+    "certifications",
+    "education",
+    "contact",
+  ];
+  const observerRef = useRef(null);
+
+  // Intersection Observer to update hash on scroll
+  useEffect(() => {
+    if (!isLoaded) return;
+    let observer;
+    let rafId;
+    function setupObserver() {
+      const handleHashUpdate = (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (visible.length > 0) {
+          const topSection = visible.reduce((prev, curr) =>
+            prev.boundingClientRect.top < curr.boundingClientRect.top ? prev : curr
+          );
+          const id = topSection.target.id;
+          if (id && window.location.hash !== `#${id}`) {
+            history.replaceState(null, "", `#${id}`);
+          }
+        }
+      };
+      observer = new window.IntersectionObserver(handleHashUpdate, {
+        root: null,
+        rootMargin: "0px 0px -60% 0px",
+        threshold: 0.4,
+      });
+      sectionIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+      observerRef.current = observer;
+    }
+    // Wait for next animation frame to ensure all sections are in DOM
+    rafId = requestAnimationFrame(setupObserver);
+    return () => {
+      if (observer) observer.disconnect();
+      if (rafId) cancelAnimationFrame(rafId);
+    };
+  }, [isLoaded]);
+
   return (
     <div className="min-h-screen text-gray-100 relative">
       <ScrollProgress />
@@ -85,7 +135,7 @@ function App() {
             <SpeedInsights />
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Suspense fallback={<Spinner message="Loading sections..." />}>
+            {/* <Suspense fallback={<Spinner />}> */}
               <Hero />
               <About />
               <Skills />
@@ -94,7 +144,7 @@ function App() {
               <Certifications />
               <Education />
               <Contact />
-            </Suspense>
+            {/* </Suspense> */}
             <WhatsAppButton />
             <Footer />
             <Socials />

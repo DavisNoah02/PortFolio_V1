@@ -14,7 +14,7 @@ export const Services = () => {
   const services = [
     {
       title: "Web Development",
-      description: "I build custom, responsive, and scalable websites from the ground up, ensuring they are optimized for performance and user experience. From single-page applications to complex e-commerce platforms, I use modern technologies to bring your vision to life.",
+      description: "I build custom, responsive, and scalable websites from the ground up, ensuring they are optimized for performance and user experience. From Single-page applications , complex Multi-page website (home, about, contact, etc.) good for SME's to complex Full website with extra pages",
       icon: "🌐",
     },
     {
@@ -34,7 +34,7 @@ export const Services = () => {
     },
     {
       title: "UI/UX Design",
-      description: "I create intuitive and visually appealing user interfaces that enhance the user experience. My design process focuses on understanding your users' needs to deliver a product that is both beautiful and easy to use, ultimately driving user satisfaction and retention.",
+      description: "I create intuitive and visually appealing user interfaces that enhance the user experience. My design process focuses on understanding your users' needs to deliver a product that is both beautiful and easy to use, as well ensuring high user satisfaction and engagement.",
       icon: "🎨",
     },
   ];
@@ -85,9 +85,10 @@ export const Services = () => {
       <RevealOnScroll>
         <section className="max-w-6xl mx-auto px-4 text-center">
           {/* Header */}
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight drop-shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent tracking-tight drop-shadow-lg">
             What I Do
           </h2>
+          <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
           <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
             I offer a range of services to help you achieve your goals. From building stunning websites to providing expert IT advice, I'm here to help you succeed.
           </p>
@@ -102,10 +103,10 @@ export const Services = () => {
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-2xl" />
                 
-                <div className="relative z-10">
+                <div className="relative z-10 ">
                   <div className="text-4xl mb-4 text-blue-400">{service.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed text-left">{service.description}</p>
                 </div>
               </div>
             ))}
