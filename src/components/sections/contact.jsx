@@ -83,7 +83,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg">Email</h4>
                   <p className="text-gray-400">m.davenoa@gmail.com</p>
-                  <a href="mailto:m.davenoa@gmail.com" className="text-blue-400 hover:underline hover:text-purple-500">
+                  <a href="mailto:m.davenoa@gmail.com" className="text-blue-200 hover:underline hover:text-blue-400">
                     Send an email
                   </a>
                 </div>
@@ -99,7 +99,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg">Phone</h4>
                   <p className="text-gray-400">+254729239023</p>
-                  <a href="tel:+254729239023" className="text-blue-400 hover:underline hover:text-purple-500">
+                  <a href="tel:+254729239023" className="text-blue-200 hover:underline hover:text-blue-400">
                     Call me
                   </a>
                 </div>
@@ -170,9 +170,9 @@ export const Contact = () => {
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-md border border-cyan-400 bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:cursor-pointer hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] disabled:opacity-60"
               >
                 <span className="relative z-10 flex items-center gap-2">
+                  {!loading && <FiSend className="transform transition-transform duration-200 group-hover:translate-x-1" />}
                   {loading ? "Sending..." : "Send Message"}
-                  {!loading && <FiSend className="transform transition-transform duration-200 group-hover:translate-x-1" />
-}
+                  
                 </span>
                 <span className="absolute left-0 top-0 h-full w-full transform translate-x-[-100%] bg-white/20 opacity-10 blur-md transition-all duration-700 group-hover:translate-x-full"></span>
               </button>

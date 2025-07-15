@@ -69,7 +69,7 @@ export const Certifications = () => (
               href={cert.credentialUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-700 to-green-900 hover:animate-pulse text-green-200 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition"
+              className="mt-auto inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-700 to-green-900 hover:animate-pulse text-green-200  font-semibold hover:bg-blue-600 hover:text-white transition"
             >
               <FaCheckCircle className="mr-2 text-blue-400" />
               Verify

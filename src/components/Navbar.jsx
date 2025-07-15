@@ -34,7 +34,7 @@ export const Navbar = ({ setMenuOpen }) => {
           <a href="#projects" className="nav-link">Projects</a>
           <a href="#contact" className="nav-link">Contact</a>
 
-          {/* GitHub Button - original theme */}
+          {/* GitHub Button */}
           <a
               href="https://github.com/DavisNoah02"
               target="_blank"

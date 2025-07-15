@@ -1,4 +1,4 @@
-# Noah Davis - Personal Portfolio
+# Noah Davi - Personal Portfolio
 
 A modern, responsive personal portfolio website built with React and Vite, showcasing my skills, projects, and professional experience as a web developer.
 

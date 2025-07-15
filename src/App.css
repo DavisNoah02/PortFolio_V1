@@ -100,7 +100,7 @@
 }
 
 /* RESUME btn*/
-/* From Uiverse.io by andrew-demchenk0 */ 
+/* From Uiverse.io */ 
 .button {
   position: relative;
   width: 150px;
@@ -110,12 +110,12 @@
   border-radius: 4px;
   align-items: center;
   border: 1px solid #12d607;
-  background-color: #362184;
+  background-color: #331779;
   overflow: hidden;
 }
-.shadow-custom-dark {
+/* .shadow-custom-dark {
   box-shadow: 0 8px 32px 0 rgba(35, 35, 70, 0.85), 0 1.5px 4px 0 rgba(81, 35, 35, 0.7);
-}
+} */
 
 .button, .button__icon, .button__text {
   transition: all 0.3s;
@@ -166,15 +166,30 @@
 
   /*  navigation menu */
   .nav-link {
-    color: #ffffff; 
+    color: #ffffff;
     transition: color 0.3s;
+    padding-bottom: 5px;
+    text-decoration: none;
+    position: relative;
   }
   
   .nav-link:hover {
     color: #03c8ff;
-    text-shadow: 0 0 5px rgba(75, 108, 240, 0.5);
-    text-shadow: 0 0 5px rgba(11, 50, 205, 0.5);
-    text-decoration: underline
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #03c8ff;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
   }
 
 
