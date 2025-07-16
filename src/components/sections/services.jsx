@@ -73,7 +73,7 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="relative flex flex-col items-center justify-center min-h-screen py-20 px-4 bg-gradient-custom2 overflow-hidden"
+      className="relative flex flex-col items-center justify-center min-h-screen pt-26 py-20 px-4 bg-gradient-custom2 overflow-hidden"
     >
       {/* Decorative Blurred Shapes */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 opacity-20 rounded-full blur-3xl -z-10" />
