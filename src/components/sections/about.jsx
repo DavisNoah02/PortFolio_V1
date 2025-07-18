@@ -17,12 +17,12 @@ export const About = () => {
   return (
     <section
       id="about"
-     className="min-h-screen flex flex-col md:flex-row items-center justify-center relative   overflow-hidden bg-gradient-custom2"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center relative overflow-hidden bg-gradient-custom2 px-2 sm:px-4 md:px-8 py-8 sm:py-12 md:py-20"
     > 
     
        {/* Profile Image  */}
   <div className="md:w-1/2 flex justify-center order-2 md:order-2">
-    <div className="relative max-w-[300px] md:max-w-[400px] w-[70%] ">
+    <div className="relative w-4/5 sm:w-3/4 md:w-[70%] max-w-[220px] sm:max-w-[300px] md:max-w-[400px] ">
       <div className="wrapper relative w-full rounded-[var(--border-radius)] bg-[var(--green)] shadow-custom transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 focus:outline-none">
         <img
           className="img relative rounded-[var(--border-radius)] mix-blend-multiply grayscale contrast-100 transition-all duration-300"
@@ -36,12 +36,12 @@ export const About = () => {
 
 
       <RevealOnScroll>
-      <div className="text-center  z-10 px-4 pt-18 py-5 order-1 md:order-2 md:items-start">
+      <div className="text-center z-10 px-2 sm:px-4 md:px-8 pt-18 py-5 order-1 md:order-2 md:items-start">
 
         <h2 className="text-4xl p-4 font-bold ">About <span className=" bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">Me </span></h2>
         <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
           {/* Typewriter Effect */}
-          <div className="mt-4 text-xl text-justify sm:text-2xl font-semibold">
+          <div className="mt-4 text-base sm:text-lg md:text-xl text-justify font-semibold">
             <span>A </span>
             <span className="text-blue-400">
               <Typewriter
@@ -56,11 +56,11 @@ export const About = () => {
           </div>
           <br />
 
-          <p className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 max-w-lg mx-auto text-justify">
+          <p className="text-gray-400 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-lg mx-auto text-justify">
             {Bio.description}
           </p>
 
-          <div className="flex justify-start space-x-8">
+          <div className="flex justify-start space-x-8 overflow-x-auto">
           <a
             href="https://docs.google.com/document/d/1g9Jg6m9U9FqEujTOjPG6xzKaenJ5mJ8SaVFmxm29EwA/edit?usp=sharing"
             target="_blank"

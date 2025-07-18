@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-# Noah Davi - Personal Portfolio
-=======
+
+
 # Noah Dave - Personal Portfolio v1.0
->>>>>>> a807608afd08c3430345d61651b4bb0ae00c8fae
+
 
 A modern, responsive personal portfolio website built with React and Vite, showcasing my skills, projects, and professional experience as a web developer.
 

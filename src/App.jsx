@@ -79,6 +79,8 @@ function App() {
   // Intersection Observer to update hash on scroll
   useEffect(() => {
     if (!isLoaded) return;
+    // Only run on desktop
+    if (window.innerWidth < 768) return;
     let observer;
     let rafId;
     function setupObserver() {
@@ -114,7 +116,7 @@ function App() {
   }, [isLoaded]);
 
   return (
-    <div className="min-h-screen text-gray-100 relative">
+    <div className="text-gray-100 relative overflow-x-hidden">
       <ScrollProgress />
 
       {!isLoaded ? (
@@ -194,9 +196,6 @@ function App() {
               </div>
             </div>
           )}
-
-
-
         </>
       )}
     </div>
