@@ -43,11 +43,16 @@ function App() {
 
   //  Welcome modal logic (first visit only)
   useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
-    if (!hasVisited) {
-      localStorage.setItem("hasVisited", "true");
-      setTimeout(() => setShowWelcome(true), 5000); // Show modal after 5s
-      setTimeout(() => setShowWelcome(false), 18000); // Auto-close after 15s
+    try {
+      const hasVisited = localStorage.getItem("hasVisited");
+      if (!hasVisited) {
+        localStorage.setItem("hasVisited", "true");
+        setTimeout(() => setShowWelcome(true), 5000);
+        setTimeout(() => setShowWelcome(false), 18000);
+      }
+    } catch {
+      // If localStorage fails, show modal anyway
+      setShowWelcome(true);
     }
   }, []);
 

@@ -22,14 +22,15 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request).catch((error) => {
-        console.error("Fetch failed:", error);
-        throw error;
-      });
-    })
-  );
+  // Only respond from cache for files in urlsToCache
+  if (urlsToCache.some(asset => event.request.url.endsWith(asset))) {
+    event.respondWith(
+      caches.match(event.request).then((response) => {
+        return response || fetch(event.request);
+      })
+    );
+  }
+  // For everything else, always fetch from network
 });
 
 self.addEventListener("activate", (event) => {
