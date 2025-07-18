@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense, useMemo } from "react";
 import CookieConsent from "react-cookie-consent";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -30,6 +30,16 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
   const [showCookie, setShowCookie] = useState(false);
+  const sectionIds = useMemo(() => [
+    "hero",
+    "about",
+    "skills",
+    "services",
+    "projects",
+    "certifications",
+    "education",
+    "contact",
+  ], []);
 
   //  Welcome modal logic (first visit only)
   useEffect(() => {
@@ -62,18 +72,9 @@ function App() {
       const el = document.getElementById(id);
       el?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [isLoaded]);
+  }, [isLoaded, sectionIds]);
 
-  const sectionIds = [
-    "hero",
-    "about",
-    "skills",
-    "services",
-    "projects",
-    "certifications",
-    "education",
-    "contact",
-  ];
+  
   const observerRef = useRef(null);
 
   // Intersection Observer to update hash on scroll
@@ -113,7 +114,7 @@ function App() {
       if (observer) observer.disconnect();
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [isLoaded]);
+  }, [isLoaded, sectionIds]);
 
   return (
     <div className="text-gray-100 relative overflow-x-hidden">
