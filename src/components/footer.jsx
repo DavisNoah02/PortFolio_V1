@@ -34,11 +34,11 @@ export const Footer = () => {
       <hr className="border-t border-gray-400 w-3/4 mx-auto mb-3" />
   
       <footer className=" text-white py-6 text-center space-y-4">
-        <h1 className="text-2xl font-bold  bg-gradient-to-br from-gray-400 via-emarald-500 to-green-500 bg-clip-text text-transparent">Noah Dave Munene</h1>
+        <h1 className="text-2xl font-bold  bg-gradient-to-br from-blue-400 via-emarald-500 to-cyan-500 bg-clip-text text-transparent">Noah Dave Munene</h1>
   {/* bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 */}
         {/* Responsive Nav Links */}
         <nav className="flex flex-wrap justify-center gap-8 text-lg font-medium text-gray-400">
-          {["About", "Skills", "Projects", "Certifications","Education", "Contact"].map((item) => (
+          {["About", "Skills", "Projects", "Certifications","Education","Services ", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
