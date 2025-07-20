@@ -45,6 +45,15 @@ body {
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
 }
 
 .reveal {
