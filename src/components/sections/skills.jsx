@@ -1,18 +1,19 @@
 'use client';
-import { useState } from 'react';
 import { Radar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 import Marquee from 'react-fast-marquee';
 import * as Tooltip from '@radix-ui/react-tooltip';
+import { RevealOnScroll } from '../RevealOnScroll';
+
 import {
   FaHtml5, FaCss3Alt, FaDatabase, FaNetworkWired, FaCode, FaCogs,
   FaReact, FaBootstrap, FaNodeJs, FaAws, FaGit, FaGithub, FaFigma, FaDocker
 } from 'react-icons/fa';
+
 import {
   SiTypescript, SiTailwindcss, SiFirebase, SiMongodb, SiPostman,
   SiNetlify, SiVercel, SiCanva, SiJsonwebtokens, SiYaml
 } from 'react-icons/si';
-import { RevealOnScroll } from '../RevealOnScroll';
 
 const skillIcons = {
   HTML5: <FaHtml5 className="text-orange-600" />,
@@ -42,30 +43,30 @@ const skillIcons = {
 };
 
 const skillDescriptions = {
-  HTML5: "Markup for modern websites",
-  CSS3: "Styling with animations & layouts",
-  React: "Frontend framework with component power",
-  TypeScript: "Typed JavaScript for better dev UX",
-  TailwindCSS: "Utility-first CSS framework",
-  Bootstrap: "Classic component-based CSS framework",
-  Json: "Token-based user authentication",
-  SQL: "Relational database querying",
-  "Node.js": "JavaScript runtime for backend",
-  Firebase: "BaaS for auth, DB & hosting",
-  AWS: "Cloud infra, compute, storage & more",
-  MongoDB: "NoSQL document DB",
-  "REST Api's": "Backend communication interfaces",
-  Yaml: "Readable config & workflows",
-  Git: "Version control system",
-  GitHub: "Remote git repo hosting",
-  VSCode: "Powerful code editor",
-  Netlify: "Simple frontend deployment",
-  Vercel: "Next.js-native deployment",
-  Postman: "API testing tool",
-  "Github Actions": "CI/CD pipeline automation",
-  "CI/CD": "Continuous Integration & Delivery",
-  Figma: "Collaborative UI/UX design",
-  Canva: "Easy drag-drop graphics tool"
+  HTML5: "Web page structure",
+  CSS3: "Styling & layouts",
+  React: "UI components",
+  TypeScript: "Typed JS",
+  TailwindCSS: "Utility CSS",
+  Bootstrap: "UI framework",
+  Json: "User tokens",
+  SQL: "Relational DB",
+  "Node.js": "Backend JS",
+  Firebase: "Auth & DB",
+  AWS: "Cloud services",
+  MongoDB: "NoSQL DB",
+  "REST Api's": "Data exchange",
+  Yaml: "Config files",
+  Git: "Code tracking",
+  GitHub: "Code hosting",
+  VSCode: "Code editor",
+  Netlify: "Site hosting",
+  Vercel: "Next.js deploy",
+  Postman: "API testing",
+  "Github Actions": "CI/CD flows",
+  "CI/CD": "Auto deploys",
+  Figma: "UI design",
+  Canva: "Quick graphics",
 };
 
 const skillsList = Object.keys(skillIcons);
@@ -79,7 +80,7 @@ export const Skills = () => {
     backend: 85,
     devops: 80,
     design: 75,
-    tools: 88
+    tools: 88,
   };
 
   const radarData = {
@@ -94,7 +95,7 @@ export const Skills = () => {
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgb(99, 102, 241)',
-    }]
+    }],
   };
 
   const radarOptions = {
@@ -105,28 +106,25 @@ export const Skills = () => {
         grid: { color: 'rgba(200, 200, 200, 0.3)' },
         pointLabels: {
           color: '#CBD5E0',
-          font: { size: 14 }
+          font: { size: 14 },
         },
         ticks: {
           display: false,
           beginAtZero: true,
           max: 100,
-          stepSize: 20
-        }
-      }
+          stepSize: 20,
+        },
+      },
     },
     plugins: {
       tooltip: {
         callbacks: {
-          label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}%`
-        }
+          label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}%`,
+        },
       },
-      legend: { display: false }
-    }
+      legend: { display: false },
+    },
   };
-
-  const [topSpeed, setTopSpeed] = useState(30);
-  const [bottomSpeed, setBottomSpeed] = useState(30);
 
   return (
     <section
@@ -142,8 +140,7 @@ export const Skills = () => {
           <div className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
 
           <p className="text-gray-300 mb-10 text-center">
-            Passionate developer with expertise in building scalable web apps
-            and cloud-driven solutions. Here’s what I’m stacking.
+            Building the web with heart, clean code, and a modern tech stack. Here’s what I’m stacking.
           </p>
 
           <div className="relative w-full h-96 flex items-center justify-center mb-8">
@@ -151,12 +148,8 @@ export const Skills = () => {
           </div>
 
           {/* Marquee One */}
-          <div
-            className="w-3/4 mx-auto mb-4 overflow-hidden"
-            onMouseEnter={() => setTopSpeed(5)}
-            onMouseLeave={() => setTopSpeed(30)}
-          >
-            <Marquee gradient={false} speed={topSpeed}>
+          <div className="w-3/4 mx-auto mb-4 overflow-hidden">
+            <Marquee gradient={false} speed={30} pauseOnHover={true}>
               {firstHalf.map((skill) => (
                 <SkillCard
                   key={skill}
@@ -169,12 +162,8 @@ export const Skills = () => {
           </div>
 
           {/* Marquee Two */}
-          <div
-            className="w-3/4 mx-auto mt-2 overflow-hidden"
-            onMouseEnter={() => setBottomSpeed(5)}
-            onMouseLeave={() => setBottomSpeed(30)}
-          >
-            <Marquee gradient={false} speed={bottomSpeed} direction="right">
+          <div className="w-3/4 mx-auto mt-2 overflow-hidden">
+            <Marquee gradient={false} speed={30} direction="right" pauseOnHover={true}>
               {secondHalf.map((skill) => (
                 <SkillCard
                   key={skill}
@@ -192,19 +181,19 @@ export const Skills = () => {
 };
 
 const SkillCard = ({ name, icon, tooltip }) => (
-  <Tooltip.Provider delayDuration={200}>
+  <Tooltip.Provider>
     <Tooltip.Root>
       <Tooltip.Trigger asChild>
-        <div className="flex flex-col items-center justify-center w-24 h-24 mx-2 bg-gray-800 rounded-lg shadow-md hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+        <div className="flex flex-col items-center justify-center w-16 h-16 mx-2 bg-gray-800 rounded-lg shadow-md hover:shadow-blue-500/30 transition-all duration-300 transform cursor-pointer">
           <div className="text-2xl hover:text-white transition-colors duration-200">
             {icon}
           </div>
-          <p className="text-sm text-gray-300 mt-2 text-center">{name}</p>
+          <p className="text-xs text-gray-300 mt-2 text-center">{name}</p>
         </div>
       </Tooltip.Trigger>
       <Tooltip.Portal>
         <Tooltip.Content
-          className="px-3 py-2 text-sm rounded-md bg-white text-black shadow-md z-50 max-w-xs text-center"
+          className="px-3 py-2 text-sm rounded-md bg-gray-500 text-white shadow-md z-50 max-w-xs text-center"
           sideOffset={6}
         >
           {tooltip}

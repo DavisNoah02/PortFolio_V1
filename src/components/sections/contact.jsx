@@ -83,7 +83,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg">Email</h4>
                   <p className="text-gray-400">m.davenoa@gmail.com</p>
-                  <a href="mailto:m.davenoa@gmail.com" className="text-blue-200 hover:underline hover:text-blue-400">
+                  <a href="mailto:m.davenoa@gmail.com" className="text-blue-400 hover:underline hover:text-blue-200">
                     Send an email
                   </a>
                 </div>
@@ -99,7 +99,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg">Phone</h4>
                   <p className="text-gray-400">+254729239023</p>
-                  <a href="tel:+254729239023" className="text-blue-200 hover:underline hover:text-blue-400">
+                  <a href="tel:+254729239023" className="text-blue-400 hover:underline hover:text-blue-200">
                     Call me
                   </a>
                 </div>
@@ -162,8 +162,8 @@ export const Contact = () => {
                   {statusMsg.text}
                 </div>
               )}
-
-              {/* ✅ New: Animated Send Button with Icon */}
+ 
+             
               <button
                 type="submit"
                 disabled={loading}

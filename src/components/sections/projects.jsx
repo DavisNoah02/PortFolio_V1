@@ -4,9 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Status helper
 const getStatus = (project) => {
-  if (project.live) return { label: "Live Demo", color: "green", icon: <FiExternalLink /> };
-  if (project.comingSoon) return { label: "Coming Soon", color: "purple", icon: <FiClock /> };
-  if (project.title === "EDUVERSE LMS") return { label: "In Development", color: "yellow", icon: <FiClock /> };
+  if (project.live) return { label: "Live ", color: "green", icon: <FiExternalLink /> };
   return { label: "Private Repo", color: "gray", icon: <FiLock /> };
 };
 
@@ -83,7 +81,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold text-lg transition-all duration-300"
                   >
-                    <FiExternalLink size={20} /> Live Demo
+                    <FiExternalLink size={20} /> View Live 
                   </a>
                 )}
                 {project.code ? (
@@ -100,13 +98,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <FiLock size={20} /> Private Repository
                   </span>
                 )}
-                {project.comingSoon && (
-                  <span className="flex items-center gap-2 text-purple-400 font-semibold text-lg">
-                    <FiClock size={20} /> Coming Soon
-                  </span>
-                )}
-                {project.title === "EDUVERSE LMS" && (
-                  <span className="flex items-center gap-2 text-yellow-400 font-semibold text-lg">
+               
+                {project.title === "Fusional Tech Agency" && (
+                  <span className="flex items-center gap-2 text-yellow-200 font-semibold text-lg">
                     <FiClock size={20} /> In Development
                   </span>
                 )}
@@ -134,7 +128,7 @@ const projects = [
   },
   {
     title: "AI Text-to-image Generator",
-    img: "/images/ai-imgP.png",
+    img: "/images/Imagify.png",
     alt: "Dall-e image Generator",
     desc: "An AI Image Generator, a web application that utilizes the DALL-E API to create unique and visually stunning images based on user-provided text descriptions.",
     tech: ["Firebase Auth", "Firebase Storage","React.js", "TailwindCSS", "Flask API", "Vercel", "Dall-e API"],
@@ -145,28 +139,40 @@ const projects = [
     type: "AI Tool",
   },
   {
-    title: "Elevate Solutions",
+    title: "Fusional Tech Agency",
     img: "/images/ES.png",
     alt: "DigitalMarketting Agency",
-    desc: "A modern digital marketing agency site built to highlight services like SEO, branding, and social media strategy. Features include service showcases, client testimonials, and a call-to-action driven design to boost conversions.",
+    desc: "Am creating a modern digital marketing agency site  to highlight services like SEO, branding, and social media strategy. Features include service showcases, client testimonials, and a call-to-action driven design to boost conversions.",
     tech: ["Next.js",  "TailwindCSS", "vercel", "radix-ui", "Framer Motion"],
     live: "",
     code: "",
     category: "Web",
     comingSoon: true,
-    type: "Business Website",
+    type: "Corporate Website",
   },
   {
-    title: "EDUVERSE LMS",
-    img: "/images/Oblak.png",
+    title: "JeoSkill Kenya",
+    img: "/images/jeoskill.png",
     alt: "Learning Mgt System",
-    desc: "A Learning Management System (LMS), a platform designed to facilitate online education and training. It allows educators to create, manage, and deliver courses, while enabling learners to access educational content, track progress, and interact with instructors and peers.",
+    desc: "A Learning Management System (LMS), a Kenyan platform designed to facilitate online education and training. It allows educators to create, manage, and deliver courses, while enabling learners to access educational content, track progress, and interact with instructors and peers.",
     tech: [ "Express.js", "Node.js", "MongoDB", "Cloudinary","React.js", "Context API", "TailwindCSS", "Axios"],
-    live: "",
-    code: "",
+    live: " https://jeoskill.vercel.app/",
+    code: " https://github.com/DavisNoah02/JeoSkillAcademyKenya.git",
     category: "Web",
-    comingSoon: true,
+    comingSoon: false,
     type: "Education Platform",
+  },
+  {
+    title: "Online Resume",
+    img: "/images/vueProfile.png",
+    alt: "Online Resume",
+    desc: "An online version of my 2025 personal resume showcasing my skills, experience, and projects. Built with a focus on clean design and user experience.",
+    tech: [ "Vue.js", "TailwindCSS", "Vercel"],
+    live: "https://noa-daveprofile.vercel.app/",
+    code: " https://github.com/DavisNoah02/vuejs-profile.git",
+    category: "Web",
+    comingSoon: false,
+    type: " Online Resume",
   },
   // {
   //   title: "A To-Do List",
@@ -251,7 +257,7 @@ export const Projects = () => {
         >
           <AnimatePresence>
             {projects.map((project, idx) => {
-              const status = getStatus(project);
+              
               return (
                 <motion.div
                   key={idx}
@@ -280,21 +286,32 @@ export const Projects = () => {
                       </div>
                     </div>
                     {/* Overlay on hover */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                      <span className="flex flex-col items-center gap-2">
-                        <span className="text-green-400 text-2xl font-bold drop-shadow-lg">View Details</span>
-                        <span className="w-16 h-1 bg-gradient-to-r from-green-400 to-blue-400 rounded-full"></span>
-                      </span>
-                    </div>
-                    {/* Status badge */}
-                    <div className="absolute top-3 left-3 flex justify-between w-full px-3">
-                      <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-${status.color}-900/70 text-${status.color}-300`}>
-                        {status.icon} {status.label}
-                      </span>
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-900/70 text-blue-300 ml-auto">
-                        {project.type}
-                      </span>
-                    </div>
+                   
+               <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                <span className="text-green-400 text-2xl mb-1">🔍</span>
+                <span className="text-emerald-200 text-xl font-semibold drop-shadow-sm">View</span>
+              </div>
+
+
+                {/* Status badge */}
+                <div className="absolute top-3 left-3 flex justify-between w-full px-3">
+                  <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ${
+                    project.live
+                      ? 'bg-green-800/70 text-green-300'
+                      : project.title === "Fusional Tech Agency" || project.comingSoon
+                      ? 'bg-yellow-700/60 text-yellow-300'
+                      : 'bg-gray-700 text-gray-300'
+                  }`}>
+                    {project.live && '🟢 Live'}
+                    {project.title === "Fusional Tech Agency" || project.comingSoon ? ' 🟡Development' : ''}
+                    {!project.live && !project.comingSoon && project.title !== "Fusional Tech Agency" && '🔒 Private Repo'}
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-800/70 text-white-200 ml-auto">
+                    {project.type}
+                  </span>
+                </div>
+
+                    
                   </div>
                   {/* Project Brief */}
                   <div className="p-5">
@@ -325,63 +342,28 @@ export const Projects = () => {
         </motion.div>
 
         {/* Work in Progress Section */}
-        {/* <div className="mt-24 flex flex-col items-center justify-center min-h-[220px]">
+         <section className="min-h-[70px] mt-20 flex flex-col items-center justify-center px-4 ">
+          {/* Animated Heading */}
           <motion.h3
-            initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 1 }}
-            className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center"
+            initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8 }}
+            className="text-xl sm:text-xl md:text-2xl font-bold text-center  text-gray-300"
           >
-            This section is evolving...
+          Work in Progress...
           </motion.h3>
-          
-          <div className="mb-4 flex items-center justify-center">
-            <span className="relative flex h-10 w-10">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-10 w-10 bg-blue-500"></span>
-            </span>
-          </div>
+          {/* Animated Spinner Icon */}
+          <div className="w-8 h-8 border-4 border-gray-500 mt-6 border-t-transparent rounded-full animate-spin"></div>
+          {/* Optional Subtext */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="text-gray-400 text-lg md:text-xl text-center max-w-md"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="mt-2 text-sm sm:text-base mt-3 text-gray-500 text-center max-w-md"
           >
-            More innovative projects launching soon...<br />
-            
+            Stay tuned, More comprehensive projects launching soon!
           </motion.p>
-        </div> */}
-         <section className="min-h-[100px] mt-24 flex flex-col items-center justify-center px-4">
-      {/* Animated Heading */}
-      <motion.h3
-        initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.8 }}
-        className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
-      >
-       More innovative projects launching soon...
-      </motion.h3>
-
-      {/* Animated Spinner Icon */}
-      <motion.div
-        className="mt-6 text-blue-400"
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      >
-        <FiClock className="animate-spin-slow text-4xl sm:text-5xl" />
-      </motion.div>
-
-      {/* Optional Subtext */}
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.8 }}
-        className="mt-4 text-sm sm:text-base text-gray-400 text-center max-w-md"
-      >
-        Stay tuned  exciting stuff in the pipeline!
-      </motion.p>
-    </section>
+        </section>
 
       </div>
 

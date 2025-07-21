@@ -19,11 +19,18 @@
   white-space: nowrap;
   font-family: "Poppins", sans-serif;
 } */
-/* global.css or inside tailwind config layer */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* global.css  */
 ::-webkit-scrollbar {
   display: none;
 }
 
+
+
+body {
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
 .btn-shine { 
 position: relative; 
   margin-left: 0;
