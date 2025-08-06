@@ -44,7 +44,7 @@
 }
 
 .hex-letter {
-  font-size: 4vw;
+  font-size: 6rem;
   max-font-size: 64px;
   font-weight: 800;
   background: linear-gradient(to bottom right, mediumspringgreen, lightseagreen);
@@ -52,7 +52,9 @@
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transform: scale(0.8);
-  animation: fadeInScale 1.2s ease-out forwards;
+  /* animation: fadeInScale 1.2s ease-out forwards; */
+  text-shadow: 0 0 10px rgba(0, 255, 150, 0.8);
+  animation: fadeIn 0.5s ease forwards;
 }
 
 /* Glow effect */
@@ -88,5 +90,24 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+/* Bigger on mobile */
+@media (max-width: 768px) {
+  .hex-letter {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hex-letter {
+    font-size: 5.5rem;
+  }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }

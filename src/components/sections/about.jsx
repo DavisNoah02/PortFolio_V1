@@ -21,8 +21,9 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center w-full relative overflow-hidden  px-2 sm:px-4 md:px-6 py-6 sm:py-10 md:py-18"
-    > 
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center w-full relative overflow-hidden px-2 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8"
+    >
+
     
        {/* Profile Image  */}
   <div className="md:w-1/2 flex justify-center order-2 md:order-2">

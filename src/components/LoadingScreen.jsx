@@ -3,22 +3,38 @@ import "./styles/LoadingScreen.css";
 
 export const LoadingScreen = ({ onComplete }) => {
   const [fadeOut, setFadeOut] = useState(false);
+  const [showLetter, setShowLetter] = useState(false);
 
   useEffect(() => {
-    const entryTime = 1200; // Time to play entry animation
-    const exitTime = 400;   // Time to play exit animation
+    const polygonAnimation = document.querySelector(".hexagon-glow animate");
 
-    const entryTimer = setTimeout(() => {
-      setFadeOut(true); // Trigger exit animation
-    }, entryTime);
+    if (!polygonAnimation) {
+      // Fallback if animation element not found
+      const fallbackTimer = setTimeout(() => {
+        setShowLetter(true);
+        setFadeOut(true);
+        setTimeout(onComplete, 400);
+      }, 1500);
+      return () => clearTimeout(fallbackTimer);
+    }
 
-    const exitTimer = setTimeout(() => {
-      onComplete(); // Unmount
-    }, entryTime + exitTime);
+    // Wait for polygon drawing to finish
+    const handleEnd = () => {
+      // Show "N" after hexagon is drawn
+      setShowLetter(true);
+
+      // Wait a bit before fading out
+      const fadeTimer = setTimeout(() => {
+        setFadeOut(true);
+        setTimeout(onComplete, 400); // match CSS fade-out
+      }, 600); // delay before fade-out
+      return () => clearTimeout(fadeTimer);
+    };
+
+    polygonAnimation.addEventListener("endEvent", handleEnd);
 
     return () => {
-      clearTimeout(entryTimer);
-      clearTimeout(exitTimer);
+      polygonAnimation.removeEventListener("endEvent", handleEnd);
     };
   }, [onComplete]);
 
@@ -27,7 +43,13 @@ export const LoadingScreen = ({ onComplete }) => {
       <div className="hex-container">
         <svg viewBox="0 0 100 100" className="hex-svg">
           <defs>
-            <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="neonGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="mediumspringgreen" />
               <stop offset="100%" stopColor="lightseagreen" />
             </linearGradient>
@@ -47,14 +69,17 @@ export const LoadingScreen = ({ onComplete }) => {
               from="300"
               to="0"
               dur="1s"
+              begin="0.3s" 
               fill="freeze"
             />
           </polygon>
         </svg>
 
-        <div className="letter-overlay">
-          <span className="hex-letter">N</span>
-        </div>
+        {showLetter && (
+          <div className="letter-overlay">
+            <span className="hex-letter">N</span>
+          </div>
+        )}
       </div>
     </div>
   );

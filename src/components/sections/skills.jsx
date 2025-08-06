@@ -4,6 +4,7 @@ import { Chart as ChartJS } from 'chart.js/auto';
 import Marquee from 'react-fast-marquee';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { RevealOnScroll } from '../RevealOnScroll';
+import { motion } from 'framer-motion';
 
 import {
   FaHtml5, FaCss3Alt, FaDatabase, FaNetworkWired, FaCode, FaCogs,
@@ -15,6 +16,7 @@ import {
   SiNetlify, SiVercel, SiCanva, SiJsonwebtokens, SiYaml
 } from 'react-icons/si';
 
+// Skill Icons
 const skillIcons = {
   HTML5: <FaHtml5 className="text-orange-600" />,
   CSS3: <FaCss3Alt className="text-blue-600" />,
@@ -42,6 +44,7 @@ const skillIcons = {
   Canva: <SiCanva className="text-blue-500" />,
 };
 
+// Skill Descriptions
 const skillDescriptions = {
   HTML5: "Web page structure",
   CSS3: "Styling & layouts",
@@ -100,20 +103,16 @@ export const Skills = () => {
 
   const radarOptions = {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       r: {
         angleLines: { color: 'rgba(200, 200, 200, 0.3)' },
         grid: { color: 'rgba(200, 200, 200, 0.3)' },
         pointLabels: {
           color: '#CBD5E0',
-          font: { size: 14 },
+          font: { size: 12 },
         },
-        ticks: {
-          display: false,
-          beginAtZero: true,
-          max: 100,
-          stepSize: 20,
-        },
+        ticks: { display: false, max: 100, stepSize: 10 },
       },
     },
     plugins: {
@@ -133,46 +132,57 @@ export const Skills = () => {
     >
       <RevealOnScroll direction="up">
         <div className="w-full max-w-5xl px-4 glass p-6 rounded-xl border bg-gray-900 border-blue-500/10 shadow-md">
-          <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
             My Skills ToolBox
           </h2>
 
-          <div className="w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
+          <div className="w-16 sm:w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
 
-          <p className="text-gray-300 mb-10 text-center">
+          <p className="text-gray-300 mb-5 text-center text-sm sm:text-base px-2">
             Building the web with heart, clean code, and a modern tech stack. Here’s what I’m stacking.
           </p>
 
-          <div className="relative w-full h-96 flex items-center justify-center mb-8">
-            <Radar data={radarData} options={radarOptions} className="w-full h-full" />
+          {/* Radar Chart */}
+          <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl  lg:max-w-lg mx-auto aspect-square mb-1">
+            <Radar data={radarData} options={radarOptions} />
           </div>
 
-          {/* Marquee One */}
-          <div className="w-3/4 mx-auto mb-4 overflow-hidden">
-            <Marquee gradient={false} speed={30} pauseOnHover={true}>
-              {firstHalf.map((skill) => (
+          {/* Desktop & Tablet → Marquee */}
+          <div className="hidden sm:block">
+            <div className="w-full sm:w-3/4 mx-auto mb-4 overflow-hidden">
+              <Marquee gradient={false} speed={30} pauseOnHover={true}>
+                {firstHalf.map((skill) => (
+                  <SkillCard key={skill} name={skill} icon={skillIcons[skill]} tooltip={skillDescriptions[skill]} />
+                ))}
+              </Marquee>
+            </div>
+
+            <div className="w-full sm:w-3/4 mx-auto mt-2 overflow-hidden">
+              <Marquee gradient={false} speed={30} direction="right" pauseOnHover={true}>
+                {secondHalf.map((skill) => (
+                  <SkillCard key={skill} name={skill} icon={skillIcons[skill]} tooltip={skillDescriptions[skill]} />
+                ))}
+              </Marquee>
+            </div>
+          </div>
+
+          {/* Mobile Grid with Fade-in Animation */}
+          <div className="grid grid-cols-4 gap-3 sm:hidden mt-6">
+            {skillsList.map((skill, i) => (
+              <motion.div
+                key={skill}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                
+              >
                 <SkillCard
-                  key={skill}
                   name={skill}
                   icon={skillIcons[skill]}
                   tooltip={skillDescriptions[skill]}
                 />
-              ))}
-            </Marquee>
-          </div>
-
-          {/* Marquee Two */}
-          <div className="w-3/4 mx-auto mt-2 overflow-hidden">
-            <Marquee gradient={false} speed={30} direction="right" pauseOnHover={true}>
-              {secondHalf.map((skill) => (
-                <SkillCard
-                  key={skill}
-                  name={skill}
-                  icon={skillIcons[skill]}
-                  tooltip={skillDescriptions[skill]}
-                />
-              ))}
-            </Marquee>
+              </motion.div>
+            ))}
           </div>
         </div>
       </RevealOnScroll>
@@ -180,15 +190,18 @@ export const Skills = () => {
   );
 };
 
+// Skill Card Component
 const SkillCard = ({ name, icon, tooltip }) => (
   <Tooltip.Provider>
     <Tooltip.Root>
       <Tooltip.Trigger asChild>
-        <div className="flex flex-col items-center justify-center w-16 h-16 mx-2 bg-gray-800 rounded-lg shadow-md hover:shadow-blue-500/30 transition-all duration-300 transform cursor-pointer">
-          <div className="text-2xl hover:text-white transition-colors duration-200">
+        <div className="flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-2 bg-gray-800 rounded-lg shadow-md hover:shadow-blue-500/30 transition-all duration-300 transform cursor-pointer">
+          <div className="text-lg sm:text-2xl md:text-3xl hover:text-white transition-colors duration-200">
             {icon}
           </div>
-          <p className="text-xs text-gray-300 mt-2 text-center">{name}</p>
+          <p className="text-[0.6rem] sm:text-xs md:text-sm text-gray-300 mt-2 text-center">
+            {name}
+          </p>
         </div>
       </Tooltip.Trigger>
       <Tooltip.Portal>
