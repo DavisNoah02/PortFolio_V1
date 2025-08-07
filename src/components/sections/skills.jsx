@@ -195,11 +195,11 @@ const SkillCard = ({ name, icon, tooltip }) => (
   <Tooltip.Provider>
     <Tooltip.Root>
       <Tooltip.Trigger asChild>
-        <div className="flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mx-2 bg-gray-800 rounded-lg shadow-md hover:shadow-blue-500/30 transition-all duration-300 transform cursor-pointer">
-          <div className="text-lg sm:text-2xl md:text-3xl hover:text-white transition-colors duration-200">
+        <div className="flex flex-col items-center justify-center w-10 h-10 sm:w-14 sm:h-14 md:w-18 md:h-18 mx-2 bg-gray-800 rounded-lg shadow-md hover:shadow-blue-500/30 transition-all duration-300 transform cursor-pointer">
+          <div className="text-sm sm:text-xl md:text-2xl hover:text-white transition-colors duration-200">
             {icon}
           </div>
-          <p className="text-[0.6rem] sm:text-xs md:text-sm text-gray-300 mt-2 text-center">
+          <p className="text-[0.3rem] sm:text-xs md:text-sm text-gray-300 mt-2 text-center">
             {name}
           </p>
         </div>

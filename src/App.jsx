@@ -143,7 +143,7 @@ function App() {
             <SpeedInsights />
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            {/* <Suspense fallback={<Spinner />}> */}
+            <Suspense fallback={<Spinner />}>
               <Hero />
               <About />
               <Skills />
@@ -152,10 +152,10 @@ function App() {
               <Certifications />
               <Education />
               <Contact />
-            {/* </Suspense> */}
-            <WhatsAppButton />
-            <Footer />
-            <Socials />
+              <WhatsAppButton />
+              <Footer />
+              <Socials />
+            </Suspense>
           </div>
 
           {/* Welcome Modal */}
