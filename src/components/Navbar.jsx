@@ -2,8 +2,12 @@ import { FaGithub } from "react-icons/fa";
 
 export const Navbar = ({ setMenuOpen }) => {
   return (
-    <nav className="fixed top-3 left-1/2 transform -translate-x-1/2 w-[98%] sm:w-[95%] md:w-[90%] lg:w-[85%] z-50
-  bg-[rgba(255,255,255,0.08)] backdrop-blur-md border border-white/10 shadow-xl rounded-xl px-6 py-1">
+    <nav className="fixed top-3 left-1/2 transform -translate-x-1/2 
+  h-16 sm:h-18 md:h-20
+  w-[98%] sm:w-[95%] md:w-[90%] lg:w-[85%] 
+  z-50 bg-[rgba(255,255,255,0.08)] backdrop-blur-md 
+  border border-white/10 shadow-xl rounded-xl px-6 py-1">
+
 
         <div className="flex justify-between items-center h-16">
           {/* Logo with classy </> styled icon */}

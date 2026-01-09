@@ -115,7 +115,7 @@ export const Services = () => {
           {/* CTA Button */}
           <button
             onClick={handleBookClick}
-            className="mt-16 inline-flex items-center gap-2 px-6 py-3 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-blue-700 to-slate-700 hover:from-blue-600 hover:to-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-400  shadow-lg hover:scale-105 transition-transform duration-300"
+            className="mt-16 inline-flex items-center gap-2 px-6 py-3 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-blue-700 to-slate-700 hover:from-blue-600 hover:to-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-400  shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer rounded-lg"
           >
             <span role="img" aria-label="calendar">📅</span>
             Let's Talk

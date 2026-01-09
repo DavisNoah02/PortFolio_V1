@@ -21,16 +21,19 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center w-full relative overflow-hidden px-2 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center w-full relative overflow-hidden px-4 sm:px-6 md:px-10 py-10"
+
     >
 
     
        {/* Profile Image  */}
-  <div className="md:w-1/2 flex justify-center order-2 md:order-2">
-    <div className="relative w-4/5 sm:w-3/4 md:w-[65%] max-w-[190px] sm:max-w-[260px] md:max-w-[290px]">
+  <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+
+    <div className="relative w-48 sm:w-56 md:w-[65%] max-w-[300px]">
+
       <div className="wrapper relative w-full rounded-[var(--border-radius)] bg-[var(--green)] shadow-custom transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 focus:outline-none">
         <img
-          className="img relative rounded-[var(--border-radius)] mix-blend-multiply grayscale contrast-100 transition-all duration-300"
+          className="img relative rounded-[var(--border-radius)] mix-blend-multiply grayscale contrast-100 transition-all duration-300 hover:cursor-pointer hover:mix-blend-normal"
           src="/profile1.jpg"
           alt="noa-dave Profile pic"
           width={480}
@@ -39,16 +42,15 @@ export const About = () => {
     </div>
   </div>
 
-
       <RevealOnScroll>
       <div className="text-center  px-2 ml-10 sm:px-4 md:px-8 pt-18 py-5 order-1 md:order-2 md:items-start">
 
         <h2 className="text-4xl p-4 font-bold ">About <span className=" bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">Me </span></h2>
         <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
           {/* Typewriter Effect */}
-          <div className="mt-4  text-base sm:text-lg md:text-xl text-justify ">
+          <div className="mt-4  text-base sm:text-lg md:text-xl text-justify  ">
             <span>A </span>
-            <span className="text-blue-400">
+            <span className="text-green-500  ">
               <Typewriter
                 words={Bio.roles}
                 loop={true}
@@ -70,7 +72,8 @@ export const About = () => {
             </p>
           ))}
 
-          <div className="flex justify-start space-x-8 overflow-x-auto mt-3">
+          <div className="flex justify-center md:justify-center mt-6">
+
           <a
             href="https://docs.google.com/document/d/1g9Jg6m9U9FqEujTOjPG6xzKaenJ5mJ8SaVFmxm29EwA/edit?usp=sharing"
             target="_blank"
