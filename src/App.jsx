@@ -14,6 +14,8 @@ import { Footer } from "./components/footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { ScrollProgress } from "./components/ScrollProgress";
 import { Spinner } from "./components/Spinner";
+import { Snowfall} from "react-snowfall";
+
 
 const Hero = lazy(() => import("./components/sections/Hero").then(module => { return { default: module.Hero }; }));
 const About = lazy(() => import("./components/sections/about").then(module => { return { default: module.About }; }));
@@ -114,6 +116,18 @@ function App() {
   return (
     <div className="text-gray-100 relative overflow-x-hidden">
       <ScrollProgress />
+      <Snowfall
+        snowflakeCount={40}
+        color="greenyellow"
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: 1,
+          pointerEvents: "none",
+          opacity: 0.3,
+        }}
+      />
 
       {!isLoaded ? (
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
