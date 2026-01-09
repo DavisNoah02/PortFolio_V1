@@ -1,5 +1,4 @@
 import { useState, useEffect, lazy, Suspense, useMemo } from "react";
-import CookieConsent from "react-cookie-consent";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useRef } from "react";
@@ -29,7 +28,6 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
-  const [showCookie, setShowCookie] = useState(false);
   const sectionIds = useMemo(() => [
     "hero",
     "about",
@@ -54,14 +52,6 @@ function App() {
       // If localStorage fails, show modal anyway
       setShowWelcome(true);
     }
-  }, []);
-
-  //  Cookie consent after 20s
-  useEffect(() => {
-    const cookieTimer = setTimeout(() => {
-      setShowCookie(true);
-    }, 20000); // 20 seconds
-    return () => clearTimeout(cookieTimer);
   }, []);
 
   // Prevent scroll during welcome modal
@@ -168,40 +158,6 @@ function App() {
             </div>
           )}
 
-          {/* Cookie Consent (delayed 20s) */}
-         {showCookie && (
-            <div className="fixed right-4 bottom-18 z-50 max-w-[500px] w-fit">
-              <div
-                className="relative flex flex-col gap-2 min-w-[240px] max-w-[500px] p-4 rounded-[18px] border-2 border-blue-500 bg-white/70 text-[#6b3a00] shadow-lg backdrop-blur hover:bg-white/90 transition-all duration-300 cursor-pointer"
-              >
-                {/* Close button */}
-                <button
-                  onClick={() => setShowCookie(false)}
-                  className="absolute top-3 right-4 text-2xl font-bold text-[#6b3a00] hover:text-red-700 focus:outline-none"
-                  aria-label="Close cookie consent"
-                >
-                  ×
-                </button>
-
-                <div className="font-bold text-base text-center">
-                  I started my own Web Development Agency!
-                </div>
-
-                <div className="text-sm text-left">
-                  If you're looking for an affordable, stunning website tailored to your needs,{' '}
-                  <a
-                    href="https://noa-dave.vercel.app"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-600 underline font-medium hover:text-blue-800"
-                  >
-                    visit my agency
-                  </a>{' '}
-                  and book a consultation call!
-                </div>
-              </div>
-            </div>
-          )}
         </>
       )}
     </div>

@@ -6,9 +6,9 @@ const educationData = [
     institution: "Chuka University",
     description:
       "I have established a strong foundation in programming, algorithms, data structures, databases, and software engineering with hands-on experience in Python, Java, JavaScript, and web technologies. I have also had the opportunity to work on real-world projects giving me the capability to develop innovative solutions. I was also part of GDSC CHUKA, which enabled me to acquire teamwork skills. Through my coursework and projects, I have honed problem-solving skills and analytical thinking, preparing me to solve real-world problems in the tech industry.",
-    grade: "Projected Class: Second Class Honors Upper Division",
+    grade: "Second Class Honors Upper Division",
     iconSrc: "images/Chuka.jpeg",
-    status: "Ongoing",
+    status: "Completed",
   },
   {
     id: 2,

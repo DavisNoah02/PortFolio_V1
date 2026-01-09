@@ -17,6 +17,7 @@ export const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [statusMsg, setStatusMsg] = useState(null);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [showRecaptcha, setShowRecaptcha] = useState(false);
 
   useEffect(() => {
     if (statusMsg) {
@@ -29,6 +30,7 @@ export const Contact = () => {
     e.preventDefault();
     if (!recaptchaToken) {
       setStatusMsg({ type: "error", text: "Please complete the reCAPTCHA.👇" });
+      setShowRecaptcha(true);
       return;
     }
 
@@ -178,12 +180,14 @@ export const Contact = () => {
               </button>
 
               {/* reCAPTCHA */}
-              <div className="relative recaptcha-container">
-                <ReCAPTCHA
-                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                  onChange={setRecaptchaToken}
-                />
-              </div>
+              {showRecaptcha && (
+                <div className="relative recaptcha-container">
+                  <ReCAPTCHA
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    onChange={setRecaptchaToken}
+                  />
+                </div>
+              )}
             </form>
           </div>
         </div>
