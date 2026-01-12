@@ -133,10 +133,10 @@ export const Skills = () => {
       <RevealOnScroll direction="up">
         <div className="w-full max-w-5xl px-4 glass p-6 rounded-xl border bg-gray-900 border-blue-500/10 shadow-md">
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-center tracking-tight drop-shadow-lg">
-            My Skills ToolBox
+            My Skill Tech-Stack
           </h2>
 
-          <div className="w-16 sm:w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
+          <div className="w-18 sm:w-24 h-1 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
 
           <p className="text-gray-300 mb-5 text-center text-sm sm:text-base px-2">
             Building the web with heart, clean code, and a modern tech stack. Here’s what I’m stacking.
@@ -145,6 +145,15 @@ export const Skills = () => {
           {/* Radar Chart */}
           <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl  lg:max-w-lg mx-auto aspect-square mb-1">
             <Radar data={radarData} options={radarOptions} />
+          </div>
+
+
+          {/* Core Technologies Tagline */}
+          <div className="mt-8 mb-6 text-center">
+            <p className="text-xs sm:text-sm uppercase tracking-widest text-gray-400">
+              Core Technologies 
+            </p>
+            <div className="w-12 h-[2px] mx-auto mt-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-60" />
           </div>
 
           {/* Desktop & Tablet → Marquee */}

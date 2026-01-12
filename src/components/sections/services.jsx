@@ -14,29 +14,49 @@ export const Services = () => {
   const services = [
     {
       title: "Web Development",
-      description: "I build custom, responsive, and scalable websites from the ground up, ensuring they are optimized for performance and user experience. From Single-page applications , complex Multi-page website (home, about, contact, etc.) good for SME's to complex Full website with extra pages",
+      tagline: "Fast, modern, scalable websites",
+      points: [
+        "Landing Pages & SPAs",
+        "Business & SME Websites",
+        "Full-Stack Web Apps",
+        "Performance Optimization",
+      ],
       icon: "🌐",
     },
     {
       title: "IT Consulting",
-      description: "I provide expert advice on network architecture, cloud solutions, and cybersecurity. My consulting services help you make informed decisions to improve your IT infrastructure, enhance security, and streamline operations for better business outcomes.",
+      tagline: "Smart tech decisions that scale",
+      points: [
+        "System Architecture",
+        "Cloud Strategy",
+        "Security Best Practices",
+        "Infrastructure Planning",
+      ],
       icon: "💼",
     },
     {
       title: "Digital Marketing",
-      description: "I develop data-driven digital marketing strategies to grow your online presence and engage your target audience. My services include content marketing, social media management, and campaign analysis to help you achieve your marketing goals.",
+      tagline: "Data-driven growth strategies",
+      points: [
+        "Content Strategy",
+        "Social Media Management",
+        "Campaign Analytics",
+        "Brand Visibility",
+      ],
       icon: "📈",
     },
     {
       title: "SEO Optimization",
-      description: "I help you rank higher on search engines like Google through comprehensive technical and content-based SEO strategies. My approach focuses on improving your website's visibility, driving organic traffic, and increasing conversions.",
+      tagline: "Rank higher. Get discovered.",
+      points: [
+        "Technical SEO",
+        "On-Page Optimization",
+        "Content SEO",
+        "Conversion Tracking",
+      ],
       icon: "🔍",
     },
-    {
-      title: "UI/UX Design",
-      description: "I create intuitive and visually appealing user interfaces that enhance the user experience. My design process focuses on understanding your users' needs to deliver a product that is both beautiful and easy to use, as well ensuring high user satisfaction and engagement.",
-      icon: "🎨",
-    },
+    
   ];
 
   const handleBookClick = () => {
@@ -55,10 +75,7 @@ export const Services = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        overlayRef.current &&
-        !overlayRef.current.contains(event.target)
-      ) {
+      if (overlayRef.current && !overlayRef.current.contains(event.target)) {
         handleCloseCal();
       }
     };
@@ -79,7 +96,6 @@ export const Services = () => {
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 opacity-20 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600 opacity-20 rounded-full blur-3xl -z-10" />
 
-      {/* Spinner Overlay */}
       {isLoading && <Spinner message="Opening calendar..." />}
 
       <RevealOnScroll>
@@ -90,37 +106,69 @@ export const Services = () => {
           </h2>
           <div className="w-24 h-1 mx-auto mb-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"></div>
           <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-            I offer a range of services to help you achieve your goals. From building stunning websites to providing expert IT advice, I'm here to help you succeed.
+            Clear, focused services built for speed, scale, and real business results.
           </p>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className="group relative p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-md shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className="group relative p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md 
+                transition-all duration-300 ease-out
+                hover:-translate-y-2 hover:shadow-2xl hover:border-blue-500/30"
               >
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-2xl" />
-                
-                <div className="relative z-10 ">
-                  <div className="text-4xl mb-4 text-blue-400">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed text-left">{service.description}</p>
+                {/* Glow */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-300" />
+
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Icon */}
+                  <div className="text-4xl mb-2 transition-transform duration-300 group-hover:scale-110">
+                    {service.icon}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {service.title}
+                  </h3>
+
+                  {/* Tagline */}
+                  <p className="text-sm text-gray-400 mb-6">
+                    {service.tagline}
+                  </p>
+
+                  {/* Points */}
+                  <ul className="mt-auto space-y-2 text-sm text-gray-300 text-left">
+                    {service.points.map((point, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <span className="text-blue-400">•</span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA */}
+          <p className="mt-14 mb-4 text-gray-400 text-base">
+            A 15-minute call can save you weeks of guesswork.
+          </p>
+
           <button
             onClick={handleBookClick}
-            className="mt-16 inline-flex items-center gap-2 px-6 py-3 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-blue-700 to-slate-700 hover:from-blue-600 hover:to-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-400  shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer rounded-lg"
+            className="mt-3 inline-flex items-center gap-2 px-6 py-3 text-base sm:text-lg font-semibold text-white 
+            bg-gradient-to-r from-blue-700 to-slate-700 
+            hover:from-blue-600 hover:to-slate-600 
+            shadow-lg hover:shadow-blue-700/30 
+            hover:scale-105 transition-all duration-300 rounded-md cursor-pointer opacity-80 hover:opacity-90"
           >
             <span role="img" aria-label="calendar">📅</span>
-            Let's Talk
+            Let's Talk ~ Book a call
           </button>
-  </section>
+        </section>
       </RevealOnScroll>
 
       {/* Calendar Overlay */}
@@ -130,7 +178,6 @@ export const Services = () => {
             ref={overlayRef}
             className="relative w-full max-w-4xl h-[90vh] rounded-2xl overflow-hidden shadow-2xl border border-white/10"
           >
-            {/* Close Menu Icon */}
             <button
               onClick={handleCloseCal}
               className="absolute top-4 right-4 text-white hover:text-red-500 z-50 transition-colors"
@@ -139,7 +186,6 @@ export const Services = () => {
               <X size={28} />
             </button>
 
-            {/* Cal iframe */}
             <iframe
               ref={iframeRef}
               src={calLink}
