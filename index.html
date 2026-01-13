@@ -1,35 +1,97 @@
 <!doctype html>
 <html lang="en">
   <head>
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9LV230ND2"></script>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E9LV230ND2');
-</script>
-
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9LV230ND2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E9LV230ND2');
+    </script>
+    
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/noa.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Noah Dave - Full Stack Web Developer</title>
+    <meta name="title" content="Noah Dave - Full Stack Web Developer " />
+    <meta name="description" content="Full stack web developer specializing in React, JavaScript, and modern web technologies. View my portfolio of innovative web applications and get in touch for your next project." />
+    <meta name="keywords" content="Noah Dave, web developer, full stack developer, React developer, JavaScript, TailwindCSS, portfolio, web design, frontend developer, software engineer" />
+    <meta name="author" content="Noah Dave" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Canonical URL (replace with your actual domain) -->
+    <link rel="canonical" href="https://noahdave.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://noahdave.com/" />
+    <meta property="og:title" content="Noah Dave - Full Stack Web Developer | React & JavaScript Expert" />
+    <meta property="og:description" content="Full stack web developer specializing in React, JavaScript, and modern web technologies. View my portfolio and connect with me." />
+    <meta property="og:image" content="https://noahdave.com/images/portfolio-preview.png" />
+    <meta property="og:image:alt" content="Noah Dave Portfolio Preview" />
+    <meta property="og:site_name" content="Noah Dave Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://noahdave.com/" />
+    <meta name="twitter:title" content="Noah Dave - Full Stack Web Developer" />
+    <meta name="twitter:description" content="Full stack web developer specializing in React, JavaScript, and modern web technologies." />
+    <meta name="twitter:image" content="https://noahdave.com/images/portfolio-preview.png" />
+    <meta name="twitter:creator" content="@noahdave" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/noa.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://cal.com" />
     <link rel="dns-prefetch" href="https://cal.com" />
-    <title>Noah Dave | Portfolio </title>
-    <meta name="description" content="Showcase of web development projects, skills, and expertise by Noah Dave. Explore live demos, source code, and more." />
-    <meta name="keywords" content="web developer, portfolio, React, TailwindCSS, projects, Noah Dave" />
-    <meta name="author" content="Noah Dave" />
-    <meta property="og:title" content="Noah Dave | Portfolio" />
-    <meta property="og:description" content="Explore web projects and skills by Noah Dave." />
-    <meta property="og:image" content="/images/portfolio.png" />
-    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Noah Dave",
+      "url": "https://noahdave.com",
+      "jobTitle": "Full Stack Web Developer",
+      "description": "Full stack web developer specializing in React, JavaScript, and modern web technologies",
+      "image": "https://noahdave.com/images/profile.jpg",
+      "sameAs": [
+        "https://github.com/noahdave",
+        "https://linkedin.com/in/noahdave",
+        "https://twitter.com/noahdave"
+      ],
+      "knowsAbout": ["Web Development", "React", "JavaScript", "TailwindCSS", "Node.js"],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Chuka University"
+      }
+    }
+    </script>
   </head>
   <body>
+    <!-- Fallback content for no-JS users and crawlers -->
+    <noscript>
+      <div style="padding: 20px; text-align: center;">
+        <h1>Noah Dave - Full Stack Web Developer</h1>
+        <p>Full stack web developer specializing in React, JavaScript, and modern web technologies.</p>
+        <p>Please enable JavaScript to view this portfolio.</p>
+      </div>
+    </noscript>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    
-
   </body>
 </html>
