@@ -1,21 +1,26 @@
 {
-  "name": "Noah Portfolio",
-  "short_name": "Noah Portfolio",
-  "description": "A personal portfolio showcasing projects, skills, and more.",
+  "name": "Noah Dave - Full Stack Web Developer",
+  "short_name": "Noah Dave",
+  "description": "Full stack web developer specializing in React, JavaScript, and modern web technologies. View my portfolio of innovative web applications.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#ffffff",
   "theme_color": "#82a079",
+  "categories": ["portfolio", "professional", "developer"],
   "icons": [
     {
       "src": "/noa.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/noa.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
